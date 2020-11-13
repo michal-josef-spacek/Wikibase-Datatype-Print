@@ -15,12 +15,16 @@ our $VERSION = 0.01;
 sub print {
 	my ($obj, $q_map_hr, $opts_hr) = @_;
 
+	# Default mapping.
 	if (! defined $q_map_hr) {
+		# TODO Dat do nejakeho souboru Wikidata::Const.
 		$q_map_hr = {
 			'Q1985727' => 'Gregorian',
 			'Q1985786' => 'Julian',
 		};
 	}
+
+	# Default options.
 	if (! defined $opts_hr) {
 		$opts_hr = {
 			'print_name' => 1,
