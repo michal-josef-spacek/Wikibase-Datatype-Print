@@ -13,7 +13,19 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $q_map_hr, $opts_hr) = @_;
+
+	if (! defined $q_map_hr) {
+		$q_map_hr = {
+			'Q1985727' => 'Gregorian',
+			'Q1985786' => 'Julian',
+		};
+	}
+	if (! defined $opts_hr) {
+		$opts_hr = {
+			'print_name' => 1,
+		};
+	}
 
 	if (! $obj->isa('Wikidata::Datatype::Value::Time')) {
 		err "Object isn't 'Wikidata::Datatype::Value::Time'.";
@@ -21,13 +33,10 @@ sub print {
 
 	# Calendar.
 	my $calendar;
-	# TODO Zjistit ostatni
-	if ($obj->calendarmodel eq 'Q1985727') {
-		$calendar = 'Gregorian';
-	} elsif ($obj->calendarmodel eq 'Q1985786') {
-		$calendar = 'Julian';
+	if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'}) {
+		$calendar = $q_map_hr->{$obj->calendarmodel} || $obj->calendarmodel;
 	} else {
-		err "Calendar model '".$obj->calendarmodel."' doesn't supported.";
+		$calendar = $obj->calendarmodel;
 	}
 
 	my $dt = DateTime::Format::ISO8601->parse_datetime((substr $obj->value, 1));
