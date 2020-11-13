@@ -13,7 +13,7 @@ my $obj = Wikidata::Datatype::Value::Time->new(
 	'value' => '+2020-09-01T00:00:00Z',
 );
 my $ret = Wikidata::Datatype::Print::Value::Time::print($obj);
-is($ret, '01 September 2020 (Gregorian)', 'Get printed value.');
+is($ret, '01 September 2020 (Gregorian)', 'Get printed value. Default printing.');
 
 # Test.
 eval {
@@ -28,7 +28,7 @@ $obj = Wikidata::Datatype::Value::Time->new(
 	'value' => '+2020-09-01T00:00:00Z',
 );
 $ret = Wikidata::Datatype::Print::Value::Time::print($obj, {}, {});
-is($ret, '01 September 2020 (Q1985727)', 'Get printed value.');
+is($ret, '01 September 2020 (Q1985727)', 'Get printed value. Only QID.');
 
 # Test.
 $obj = Wikidata::Datatype::Value::Time->new(
@@ -39,4 +39,4 @@ $ret = Wikidata::Datatype::Print::Value::Time::print($obj, {
 }, {
 	'print_name' => 1,
 });
-is($ret, '01 September 2020 (foo)', 'Get printed value.');
+is($ret, '01 September 2020 (foo)', 'Get printed value. Explicit mapping.');
