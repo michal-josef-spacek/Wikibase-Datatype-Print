@@ -13,7 +13,7 @@ my $obj = Wikidata::Datatype::Value::Globecoordinate->new(
 	'value' => [49.6398383, 18.1484031],
 );
 my $ret = Wikidata::Datatype::Print::Value::Globecoordinate::print($obj);
-is($ret, 'TODO', 'Get printed value.');
+is($ret, '(49.6398383, 18.1484031)', 'Get printed value.');
 
 # Test.
 eval {

@@ -18,7 +18,9 @@ sub print {
 		err "Object isn't 'Wikidata::Datatype::Value::Globecoordinate'.";
 	}
 
-	return $obj->value;
+	my $ret = '('.$obj->latitude.', '.$obj->longitude.')';
+
+	return $ret;
 }
 
 1;
