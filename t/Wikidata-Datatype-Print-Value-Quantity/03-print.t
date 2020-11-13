@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 use Wikidata::Datatype::Value::Quantity;
 use Wikidata::Datatype::Print::Value::Quantity;
@@ -22,3 +22,11 @@ eval {
 is($EVAL_ERROR, "Object isn't 'Wikidata::Datatype::Value::Quantity'.\n",
 	"Object isn't 'Wikidata::Datatype::Value::Quantity'.");
 clean();
+
+# Test.
+$obj = Wikidata::Datatype::Value::Quantity->new(
+	'unit' => 'Q190900',
+	'value' => 10,
+);
+$ret = Wikidata::Datatype::Print::Value::Quantity::print($obj);
+is($ret, '10 (Q190900)', 'Get printed value.');

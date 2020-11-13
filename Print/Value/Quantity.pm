@@ -18,7 +18,12 @@ sub print {
 		err "Object isn't 'Wikidata::Datatype::Value::Quantity'.";
 	}
 
-	return $obj->value;
+	my $ret = $obj->value;
+	if ($obj->unit) {
+		$ret .= ' ('.$obj->unit.')';
+	}
+
+	return $ret;
 }
 
 1;
