@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Value::Item;
+package Wikibase::Datatype::Print::Value::Item;
 
 use base qw(Exporter);
 use strict;
@@ -14,8 +14,8 @@ our $VERSION = 0.01;
 sub print {
 	my $obj = shift;
 
-	if (! $obj->isa('Wikidata::Datatype::Value::Item')) {
-		err "Object isn't 'Wikidata::Datatype::Value::Item'.";
+	if (! $obj->isa('Wikibase::Datatype::Value::Item')) {
+		err "Object isn't 'Wikibase::Datatype::Value::Item'.";
 	}
 
 	return $obj->value;

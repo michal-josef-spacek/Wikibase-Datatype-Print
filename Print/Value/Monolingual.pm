@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Value::Monolingual;
+package Wikibase::Datatype::Print::Value::Monolingual;
 
 use base qw(Exporter);
 use strict;
@@ -14,8 +14,8 @@ our $VERSION = 0.01;
 sub print {
 	my $obj = shift;
 
-	if (! $obj->isa('Wikidata::Datatype::Value::Monolingual')) {
-		err "Object isn't 'Wikidata::Datatype::Value::Monolingual'.";
+	if (! $obj->isa('Wikibase::Datatype::Value::Monolingual')) {
+		err "Object isn't 'Wikibase::Datatype::Value::Monolingual'.";
 	}
 
 	return $obj->value.' ('.$obj->language.')';

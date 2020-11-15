@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print;
+package Wikibase::Datatype::Print;
 
 use strict;
 use warnings;

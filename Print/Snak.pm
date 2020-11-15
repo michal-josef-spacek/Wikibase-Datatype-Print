@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Snak;
+package Wikibase::Datatype::Print::Snak;
 
 use base qw(Exporter);
 use strict;
@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Readonly;
-use Wikidata::Datatype::Print::Value;
+use Wikibase::Datatype::Print::Value;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -15,13 +15,13 @@ our $VERSION = 0.01;
 sub print {
 	my $obj = shift;
 
-	if (! $obj->isa('Wikidata::Datatype::Snak')) {
-		err "Object isn't 'Wikidata::Datatype::Snak'.";
+	if (! $obj->isa('Wikibase::Datatype::Snak')) {
+		err "Object isn't 'Wikibase::Datatype::Snak'.";
 	}
 
 	my $ret = $obj->property.': ';
 	if ($obj->snaktype eq 'value') {
-		$ret .= Wikidata::Datatype::Print::Value::print($obj->datavalue);
+		$ret .= Wikibase::Datatype::Print::Value::print($obj->datavalue);
 	} elsif ($obj->snaktype eq 'novalue') {
 		$ret .= 'no value';
 	} elsif ($obj->snaktype eq 'somevalue') {

@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Value::Quantity;
+package Wikibase::Datatype::Print::Value::Quantity;
 
 use base qw(Exporter);
 use strict;
@@ -16,7 +16,7 @@ sub print {
 
 	# Default mapping.
 	if (! defined $q_map_hr) {
-		# TODO Dat do nejakeho souboru Wikidata::Const.
+		# TODO Dat do nejakeho souboru Wikibase::Const.
 		$q_map_hr = {
 			'Q174728' => 'centimetre',
 			'Q11573' => 'metre',
@@ -42,8 +42,8 @@ sub print {
 		};
 	}
 
-	if (! $obj->isa('Wikidata::Datatype::Value::Quantity')) {
-		err "Object isn't 'Wikidata::Datatype::Value::Quantity'.";
+	if (! $obj->isa('Wikibase::Datatype::Value::Quantity')) {
+		err "Object isn't 'Wikibase::Datatype::Value::Quantity'.";
 	}
 
 	# Unit.

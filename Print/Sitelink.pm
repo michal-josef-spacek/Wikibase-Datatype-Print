@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Sitelink;
+package Wikibase::Datatype::Print::Sitelink;
 
 use base qw(Exporter);
 use strict;
@@ -6,8 +6,8 @@ use warnings;
 
 use Error::Pure qw(err);
 use Readonly;
-use Wikidata::Datatype::Sitelink;
-use Wikidata::Datatype::Value::Item;
+use Wikibase::Datatype::Sitelink;
+use Wikibase::Datatype::Value::Item;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -16,8 +16,8 @@ our $VERSION = 0.01;
 sub print {
 	my $obj = shift;
 
-	if (! $obj->isa('Wikidata::Datatype::Sitelink')) {
-		err "Object isn't 'Wikidata::Datatype::Sitelink'.";
+	if (! $obj->isa('Wikibase::Datatype::Sitelink')) {
+		err "Object isn't 'Wikibase::Datatype::Sitelink'.";
 	}
 
 	my $struct_hr = {

@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Value::Time;
+package Wikibase::Datatype::Print::Value::Time;
 
 use base qw(Exporter);
 use strict;
@@ -17,7 +17,7 @@ sub print {
 
 	# Default mapping.
 	if (! defined $q_map_hr) {
-		# TODO Dat do nejakeho souboru Wikidata::Const.
+		# TODO Dat do nejakeho souboru Wikibase::Const.
 		$q_map_hr = {
 			'Q1985727' => 'Gregorian',
 			'Q1985786' => 'Julian',
@@ -31,8 +31,8 @@ sub print {
 		};
 	}
 
-	if (! $obj->isa('Wikidata::Datatype::Value::Time')) {
-		err "Object isn't 'Wikidata::Datatype::Value::Time'.";
+	if (! $obj->isa('Wikibase::Datatype::Value::Time')) {
+		err "Object isn't 'Wikibase::Datatype::Value::Time'.";
 	}
 
 	# Calendar.

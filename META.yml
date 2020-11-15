@@ -1,5 +1,5 @@
 ---
-abstract: 'Wikidata data types print.'
+abstract: 'Wikibase data types print.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
@@ -17,7 +17,7 @@ license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Wikidata-Datatype-Print
+name: Wikibase-Datatype-Print
 no_index:
   directory:
     - inc
@@ -30,8 +30,8 @@ requires:
   Unicode::UTF8: 0
   perl: 5.6.2
 resources:
-  bugtracker: https://github.com/michal-josef-spacek/Wikidata-Datatype-Print/issues
-  homepage: https://github.com/michal-josef-spacek/Wikidata-Datatype-Print
+  bugtracker: https://github.com/michal-josef-spacek/Wikibase-Datatype-Print/issues
+  homepage: https://github.com/michal-josef-spacek/Wikibase-Datatype-Print
   license: http://opensource.org/licenses/bsd-license.php
-  repository: git://github.com/michal-josef-spacek/Wikidata-Datatype-Print
+  repository: git://github.com/michal-josef-spacek/Wikibase-Datatype-Print
 version: '0.01'

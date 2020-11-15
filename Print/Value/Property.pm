@@ -1,4 +1,4 @@
-package Wikidata::Datatype::Print::Value::Property;
+package Wikibase::Datatype::Print::Value::Property;
 
 use base qw(Exporter);
 use strict;
@@ -14,8 +14,8 @@ our $VERSION = 0.01;
 sub print {
 	my $obj = shift;
 
-	if (! $obj->isa('Wikidata::Datatype::Value::Property')) {
-		err "Object isn't 'Wikidata::Datatype::Value::Property'.";
+	if (! $obj->isa('Wikibase::Datatype::Value::Property')) {
+		err "Object isn't 'Wikibase::Datatype::Value::Property'.";
 	}
 
 	return $obj->value;

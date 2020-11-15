@@ -5,7 +5,7 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'Wikidata data types print.';
+abstract 'Wikibase data types print.';
 author 'Michal Josef Spacek <skim@cpan.org>';
 author_requires 'English' => 0;
 author_requires 'File::Object' => 0.05;
@@ -14,7 +14,7 @@ author_requires 'Test::NoWarnings' => 0;
 author_requires 'Test::Pod' => 0;
 author_requires 'Test::Pod::Coverage' => 0;
 license 'bsd';
-name 'Wikidata-Datatype-Print';
+name 'Wikibase-Datatype-Print';
 perl_version 5.006002;
 readme_from 'Print.pm';
 recursive_author_tests('xt');
@@ -22,9 +22,9 @@ requires 'Class::Utils' => 0.03;
 requires 'Error::Pure' => 0.15;
 requires 'List::MoreUtils' => 0;
 requires 'Unicode::UTF8' => 0;
-resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Wikidata-Datatype-Print/issues',
-resources 'homepage' => 'https://github.com/michal-josef-spacek/Wikidata-Datatype-Print';
-resources 'repository' => 'git://github.com/michal-josef-spacek/Wikidata-Datatype-Print';
+resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print/issues',
+resources 'homepage' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print';
+resources 'repository' => 'git://github.com/michal-josef-spacek/Wikibase-Datatype-Print';
 test_requires 'English' => 0;
 test_requires 'Error::Pure::Utils' => 0;
 test_requires 'Test::More' => 0;
