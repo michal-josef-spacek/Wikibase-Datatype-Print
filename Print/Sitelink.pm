@@ -6,6 +6,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Readonly;
+use Wikibase::Datatype::Print::Value::Item;
 use Wikibase::Datatype::Sitelink;
 use Wikibase::Datatype::Value::Item;
 
@@ -20,15 +21,19 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Sitelink'.";
 	}
 
-	my $struct_hr = {
-		'badges' => [
-			map { $_->value } @{$obj->badges},
-		],
-		'site' => $obj->site,
-		'title' => $obj->title,
-	};
+	my $ret = '';
+	if (defined $obj->title) {
+		$ret .= $obj->title;
+	}
+	if (defined $obj->site) {
+		$ret .= ' ('.$obj->site.')';
+	}
+	if (@{$obj->badges}) {
+		my @print = map { Wikibase::Datatype::Print::Value::Item::print($_) } @{$obj->badges};
+		$ret .= ' ['.(join ' ', @print).']';
+	}
 
-	return $struct_hr;
+	return $ret;
 }
 
 1;
