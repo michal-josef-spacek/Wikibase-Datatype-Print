@@ -15,6 +15,7 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 Print.pm
+Print/Form.pm
 Print/Reference.pm
 Print/Sitelink.pm
 Print/Snak.pm
@@ -28,6 +29,9 @@ Print/Value/Quantity.pm
 Print/Value/String.pm
 Print/Value/Time.pm
 README
+t/Wikibase-Datatype-Print-Form/01-use.t
+t/Wikibase-Datatype-Print-Form/02-version.t
+t/Wikibase-Datatype-Print-Form/03-print.t
 t/Wikibase-Datatype-Print-Reference/01-use.t
 t/Wikibase-Datatype-Print-Reference/02-version.t
 t/Wikibase-Datatype-Print-Sitelink/01-use.t
@@ -64,6 +68,8 @@ t/Wikibase-Datatype-Print-Value/02-version.t
 t/Wikibase-Datatype-Print-Value/03-print.t
 t/Wikibase-Datatype-Print/01-use.t
 t/Wikibase-Datatype-Print/02-version.t
+xt/Wikibase-Datatype-Print-Form/01-pod_coverage.t
+xt/Wikibase-Datatype-Print-Form/02-pod.t
 xt/Wikibase-Datatype-Print-Reference/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Reference/02-pod.t
 xt/Wikibase-Datatype-Print-Sitelink/01-pod_coverage.t
