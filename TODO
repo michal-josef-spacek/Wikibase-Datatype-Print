@@ -2,8 +2,6 @@ TODO
 ====
 2. Implementovat statement.
 3. Jak delat preklady Q a P hodnot?
-4. Implementovat form
-5. Implementovat sense
 6. Implementovat lexeme
 7. Preklady popisnych textu (cs, en)?
 8. Udelat Utils, kde bude tisknuti statements (Form, Sense a dalsi)
@@ -14,3 +12,9 @@ Applied
 =======
 1. Implementovat prevodni tabulku do Quantity. V tisku nechceme Q123
 OK [20201113] skim
+
+4. Implementovat form
+OK [20211204] skim
+
+5. Implementovat sense
+OK [20211204] skim
