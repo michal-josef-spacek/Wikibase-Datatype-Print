@@ -6,8 +6,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Readonly;
-use Wikibase::Datatype::Reference;
-use Wikibase::Datatype::Struct::Utils qw(obj_array_ref2struct struct2snaks_array_ref);
+use Wikibase::Datatype::Print::Snak;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -21,9 +20,11 @@ sub print {
 	}
 
 	my @ret;
-#	my $struct_hr = obj_array_ref2struct($obj->snaks, 'snaks');
+	foreach my $snak (@{$obj->snaks}) {
+		push @ret, Wikibase::Datatype::Print::Snak::print($snak);
+	}
 
-	return @ret;
+	return wantarray ? @ret : (join "\n", @ret);
 }
 
 1;

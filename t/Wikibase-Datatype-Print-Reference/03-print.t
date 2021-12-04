@@ -1,0 +1,24 @@
+use strict;
+use warnings;
+
+use Test::More 'tests' => 2;
+use Test::NoWarnings;
+use Wikibase::Datatype::Print::Reference;
+use Wikibase::Datatype::Reference;
+use Wikibase::Datatype::Snak;
+use Wikibase::Datatype::Value::String;
+
+# Test.
+my $obj = Wikibase::Datatype::Reference->new(
+	'snaks' => [
+		Wikibase::Datatype::Snak->new(
+			'datatype' => 'string',
+			'datavalue' => Wikibase::Datatype::Value::String->new(
+				'value' => 'text',
+			),
+			'property' => 'P11',
+		),
+	],
+);
+my $ret = Wikibase::Datatype::Print::Reference::print($obj);
+is($ret, 'P11: text', 'Get printed value.');

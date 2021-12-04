@@ -34,6 +34,7 @@ t/Wikibase-Datatype-Print-Form/02-version.t
 t/Wikibase-Datatype-Print-Form/03-print.t
 t/Wikibase-Datatype-Print-Reference/01-use.t
 t/Wikibase-Datatype-Print-Reference/02-version.t
+t/Wikibase-Datatype-Print-Reference/03-print.t
 t/Wikibase-Datatype-Print-Sitelink/01-use.t
 t/Wikibase-Datatype-Print-Sitelink/02-version.t
 t/Wikibase-Datatype-Print-Snak/01-use.t
