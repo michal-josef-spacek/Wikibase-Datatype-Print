@@ -2,7 +2,6 @@ TODO
 ====
 2. Implementovat statement.
 3. Jak delat preklady Q a P hodnot?
-6. Implementovat lexeme
 7. Preklady popisnych textu (cs, en)?
 8. Udelat Utils, kde bude tisknuti statements (Form, Sense a dalsi)
 9. Moznost prekladu (Q42 -> Douglas Adams (cs))
@@ -18,3 +17,6 @@ OK [20211204] skim
 
 5. Implementovat sense
 OK [20211204] skim
+
+6. Implementovat lexeme
+OK [20211205] skim
