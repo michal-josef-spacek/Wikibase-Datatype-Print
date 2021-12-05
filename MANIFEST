@@ -16,6 +16,7 @@ MANIFEST			This list of files
 META.yml
 Print.pm
 Print/Form.pm
+Print/Lexeme.pm
 Print/Reference.pm
 Print/Sitelink.pm
 Print/Snak.pm
@@ -32,6 +33,9 @@ README
 t/Wikibase-Datatype-Print-Form/01-use.t
 t/Wikibase-Datatype-Print-Form/02-version.t
 t/Wikibase-Datatype-Print-Form/03-print.t
+t/Wikibase-Datatype-Print-Lexeme/01-use.t
+t/Wikibase-Datatype-Print-Lexeme/02-version.t
+t/Wikibase-Datatype-Print-Lexeme/03-print.t
 t/Wikibase-Datatype-Print-Reference/01-use.t
 t/Wikibase-Datatype-Print-Reference/02-version.t
 t/Wikibase-Datatype-Print-Reference/03-print.t
@@ -71,6 +75,8 @@ t/Wikibase-Datatype-Print/01-use.t
 t/Wikibase-Datatype-Print/02-version.t
 xt/Wikibase-Datatype-Print-Form/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Form/02-pod.t
+xt/Wikibase-Datatype-Print-Lexeme/01-pod_coverage.t
+xt/Wikibase-Datatype-Print-Lexeme/02-pod.t
 xt/Wikibase-Datatype-Print-Reference/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Reference/02-pod.t
 xt/Wikibase-Datatype-Print-Sitelink/01-pod_coverage.t
