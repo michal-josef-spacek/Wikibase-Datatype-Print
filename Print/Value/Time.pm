@@ -33,7 +33,7 @@ sub print {
 	# Calendar.
 	my $calendar;
 	if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'} && exists $opts_hr->{'cb'}) {
-		$calendar = $opts_hr->{'cb'}->get('property_label', $obj->calendarmodel) || $obj->calendarmodel;
+		$calendar = $opts_hr->{'cb'}->get('label', $obj->calendarmodel) || $obj->calendarmodel;
 	} else {
 		$calendar = $obj->calendarmodel;
 	}
