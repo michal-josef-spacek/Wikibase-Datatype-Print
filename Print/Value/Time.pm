@@ -13,16 +13,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my ($obj, $q_map_hr, $opts_hr) = @_;
-
-	# Default mapping.
-	if (! defined $q_map_hr) {
-		# TODO Dat do nejakeho souboru Wikibase::Const.
-		$q_map_hr = {
-			'Q1985727' => 'Gregorian',
-			'Q1985786' => 'Julian',
-		};
-	}
+	my ($obj, $opts_hr) = @_;
 
 	# Default options.
 	if (! defined $opts_hr) {
@@ -35,10 +26,14 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Value::Time'.";
 	}
 
+	if (exists $opts_hr->{'cb'} && ! $opts_hr->{'cb'}->isa('Wikibase::Cache::Backend')) {
+		err "Option 'cb' must be a instance of Wikibase::Cache::Backend.";
+	}
+
 	# Calendar.
 	my $calendar;
-	if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'}) {
-		$calendar = $q_map_hr->{$obj->calendarmodel} || $obj->calendarmodel;
+	if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'} && exists $opts_hr->{'cb'}) {
+		$calendar = $opts_hr->{'cb'}->get('property_label', $obj->calendarmodel) || $obj->calendarmodel;
 	} else {
 		$calendar = $obj->calendarmodel;
 	}
