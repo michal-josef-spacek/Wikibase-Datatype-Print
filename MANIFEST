@@ -19,6 +19,7 @@ Print/Form.pm
 Print/Item.pm
 Print/Lexeme.pm
 Print/Reference.pm
+Print/Sense.pm
 Print/Sitelink.pm
 Print/Snak.pm
 Print/Statement.pm
@@ -43,6 +44,9 @@ t/Wikibase-Datatype-Print-Lexeme/03-print.t
 t/Wikibase-Datatype-Print-Reference/01-use.t
 t/Wikibase-Datatype-Print-Reference/02-version.t
 t/Wikibase-Datatype-Print-Reference/03-print.t
+t/Wikibase-Datatype-Print-Sense/01-use.t
+t/Wikibase-Datatype-Print-Sense/02-version.t
+t/Wikibase-Datatype-Print-Sense/03-print.t
 t/Wikibase-Datatype-Print-Sitelink/01-use.t
 t/Wikibase-Datatype-Print-Sitelink/02-version.t
 t/Wikibase-Datatype-Print-Snak/01-use.t
@@ -85,6 +89,8 @@ xt/Wikibase-Datatype-Print-Lexeme/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Lexeme/02-pod.t
 xt/Wikibase-Datatype-Print-Reference/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Reference/02-pod.t
+xt/Wikibase-Datatype-Print-Sense/01-pod_coverage.t
+xt/Wikibase-Datatype-Print-Sense/02-pod.t
 xt/Wikibase-Datatype-Print-Sitelink/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Sitelink/02-pod.t
 xt/Wikibase-Datatype-Print-Snak/01-pod_coverage.t
