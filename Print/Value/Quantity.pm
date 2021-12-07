@@ -12,28 +12,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my ($obj, $q_map_hr, $opts_hr) = @_;
-
-	# Default mapping.
-	if (! defined $q_map_hr) {
-		# TODO Dat do nejakeho souboru Wikibase::Const.
-		$q_map_hr = {
-			'Q174728' => 'centimetre',
-			'Q11573' => 'metre',
-			'Q828224' => 'kilometre',
-			'Q3710' => 'foot',
-			'Q174789' => 'milimetre',
-			'Q218593' => 'inch',
-			'Q253276' => 'mile',
-			'Q200323' => 'decimetre',
-			'Q844338' => 'hectometre',
-			'Q848856' => 'decametre',
-			'Q355198' => 'pixel',
-			'Q178674' => 'nanometre',
-			'Q7673190' => 'table cell',
-			'Q70280567' => 'Prussian foot',
-		};
-	}
+	my ($obj, $opts_hr) = @_;
 
 	# Default options.
 	if (! defined $opts_hr) {
@@ -46,11 +25,15 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Value::Quantity'.";
 	}
 
+	if (exists $opts_hr->{'cb'} && ! $opts_hr->{'cb'}->isa('Wikibase::Cache::Backend')) {
+		err "Option 'cb' must be a instance of Wikibase::Cache::Backend.";
+	}
+
 	# Unit.
 	my $unit;
 	if ($obj->unit) {
-		if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'}) {
-			$unit = $q_map_hr->{$obj->unit} || $obj->unit;
+		if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'} && exists $opts_hr->{'cb'}) {
+			$unit = $opts_hr->{'cb'}->get('property_label', $obj->unit) || $obj->unit;
 		} else {
 			$unit = $obj->unit;
 		}
