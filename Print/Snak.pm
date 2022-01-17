@@ -13,13 +13,21 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
 
 	if (! $obj->isa('Wikibase::Datatype::Snak')) {
 		err "Object isn't 'Wikibase::Datatype::Snak'.";
 	}
 
-	my $ret = $obj->property.': ';
+	my $property_name = '';
+	if (exists $opts_hr->{'cache'}) {
+		$property_name = $opts_hr->{'cache'}->get('label', $obj->property);
+		if (defined $property_name) {
+			$property_name = " ($property_name)";
+		}
+	}
+
+	my $ret = $obj->property.$property_name.': ';
 	if ($obj->snaktype eq 'value') {
 		$ret .= Wikibase::Datatype::Print::Value::print($obj->datavalue);
 	} elsif ($obj->snaktype eq 'novalue') {

@@ -68,7 +68,7 @@ sub print {
 	# Statements.
 	my @statements;
 	foreach my $statement (@{$obj->statements}) {
-		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement);
+		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement, $opts_hr);
 	}
 	if (@statements) {
 		push @ret, (

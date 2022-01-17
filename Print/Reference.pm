@@ -13,7 +13,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
 
 	if (! $obj->isa('Wikibase::Datatype::Reference')) {
 		err "Object isn't 'Wikibase::Datatype::Reference'.";
@@ -21,7 +21,7 @@ sub print {
 
 	my @ret;
 	foreach my $snak (@{$obj->snaks}) {
-		push @ret, Wikibase::Datatype::Print::Snak::print($snak);
+		push @ret, Wikibase::Datatype::Print::Snak::print($snak, $opts_hr);
 	}
 
 	return wantarray ? @ret : (join "\n", @ret);
