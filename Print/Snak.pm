@@ -24,6 +24,8 @@ sub print {
 		$property_name = $opts_hr->{'cache'}->get('label', $obj->property);
 		if (defined $property_name) {
 			$property_name = " ($property_name)";
+		} else {
+			$property_name = '';
 		}
 	}
 
