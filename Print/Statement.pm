@@ -6,10 +6,8 @@ use warnings;
 
 use Error::Pure qw(err);
 use Readonly;
-use Wikibase::Datatype::Statement;
 use Wikibase::Datatype::Print::Reference;
 use Wikibase::Datatype::Print::Snak;
-use Wikibase::Datatype::Struct::Utils qw(obj_array_ref2struct struct2snaks_array_ref);
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -25,22 +23,21 @@ sub print {
 	my @ret = (
 		Wikibase::Datatype::Print::Snak::print($obj->snak).' (normal)',
 	);
-#	my $struct_hr = {
-#		'mainsnak' => Wikibase::Datatype::Struct::Snak::obj2struct($obj->snak),
-#		@{$obj->property_snaks} ? (
-#			%{obj_array_ref2struct($obj->property_snaks, 'qualifiers')},
-#		) : (),
-#		'rank' => $obj->rank,
-#		@{$obj->references} ? (
-#			'references' => [
-#				map { Wikibase::Datatype::Struct::Reference::obj2struct($_); }
-#				@{$obj->references},
-#			],
-#		) : (),
-#		'type' => 'statement',
-#	};
+	foreach my $property_snak (@{$obj->property_snaks}) {
+		push @ret, ' '.Wikibase::Datatype::Print::Snak::print($property_snak);
+	}
+	my @ref;
+	foreach my $reference (@{$obj->references}) {
+		push @ref, map { '  '.$_ } Wikibase::Datatype::Print::Reference::print($reference);
+	}
+	if (@ref) {
+		push @ret, (
+			' References',
+			@ref,
+		);
+	}
 
-	return @ret;
+	return wantarray ? @ret : (join "\n", @ret);
 }
 
 1;

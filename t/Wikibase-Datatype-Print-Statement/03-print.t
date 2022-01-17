@@ -5,11 +5,13 @@ use English;
 use Error::Pure::Utils qw(clean);
 use Test::More 'tests' => 4;
 use Test::NoWarnings;
+use Wikibase::Datatype::Print::Statement;
 use Wikibase::Datatype::Snak;
 use Wikibase::Datatype::Statement;
 use Wikibase::Datatype::Reference;
+use Wikibase::Datatype::Value::Item;
 use Wikibase::Datatype::Value::String;
-use Wikibase::Datatype::Print::Statement;
+use Wikibase::Datatype::Value::Time;
 
 # Test.
 my $obj = Wikibase::Datatype::Statement->new(
@@ -98,10 +100,10 @@ is_deeply(
 	\@ret,
 	[
 		'P11: 1.1 (normal)',
-		'- P642: Q474741',
-		'- ref[0]: P248: Q53919',
-		'- ref[0]: P214: 113230702',
-		'- ref[0]: P813: 07 december 2013 (Gregorian)',
+		' P642: Q474741',
+		' ref[0]: P248: Q53919',
+		' ref[0]: P214: 113230702',
+		' ref[0]: P813: 07 december 2013 (Gregorian)',
 	],
 	'Get printed value.',
 );
