@@ -17,7 +17,11 @@ our $VERSION = 0.01;
 sub print {
 	my ($obj, $opts_hr) = @_;
 
-	if (! defined $opts_hr || ! exists $opts_hr->{'lang'}) {
+	if (! defined $opts_hr) {
+		$opts_hr = {};
+	}
+
+	if (! exists $opts_hr->{'lang'}) {
 		$opts_hr->{'lang'} = 'en';
 	}
 
