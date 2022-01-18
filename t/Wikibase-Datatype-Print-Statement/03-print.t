@@ -101,9 +101,10 @@ is_deeply(
 	[
 		'P11: 1.1 (normal)',
 		' P642: Q474741',
-		' ref[0]: P248: Q53919',
-		' ref[0]: P214: 113230702',
-		' ref[0]: P813: 07 december 2013 (Gregorian)',
+		' References',
+		'  P248: Q53919',
+		'  P214: 113230702',
+		'  P813: 07 December 2013 (Q1985727)',
 	],
 	'Get printed value.',
 );
