@@ -19,6 +19,7 @@ perl_version 5.006002;
 readme_from 'Print.pm';
 recursive_author_tests('xt');
 requires 'Class::Utils' => 0.03;
+requires 'DateTime::Format::ISO8601' => 0;
 requires 'Error::Pure' => 0.15;
 requires 'List::MoreUtils' => 0;
 requires 'Unicode::UTF8' => 0;
