@@ -1,6 +1,5 @@
 TODO
 ====
-2. Implementovat statement.
 7. Preklady popisnych textu (cs, en)?
 8. Udelat Utils, kde bude tisknuti statements (Form, Sense a dalsi)
 9. Moznost prekladu (Q42 -> Douglas Adams (cs)) i P31
@@ -27,3 +26,6 @@ OK [20211205] skim
 3. Jak delat preklady Q a P hodnot?
 Stejne jako 9)
 NONE [20211205] skim
+
+2. Implementovat statement.
+OK [20220529] skim
