@@ -1,7 +1,9 @@
 use strict;
 use warnings;
 
-use Test::More 'tests' => 2;
+use English;
+use Error::Pure::Utils qw(clean);
+use Test::More 'tests' => 3;
 use Test::NoWarnings;
 use Wikibase::Datatype::Sitelink;
 use Wikibase::Datatype::Value::Item;
@@ -22,3 +24,11 @@ my $obj = Wikibase::Datatype::Sitelink->new(
 );
 my $ret = Wikibase::Datatype::Print::Sitelink::print($obj);
 is($ret, 'Title (enwiki) [Q123 Q321]', 'Print sitelink.');
+
+# Test.
+eval {
+	Wikibase::Datatype::Print::Sitelink::print('bad');
+};
+is($EVAL_ERROR, "Object isn't 'Wikibase::Datatype::Sitelink'.\n",
+	"Object isn't 'Wikibase::Datatype::Sitelink'.");
+clean();

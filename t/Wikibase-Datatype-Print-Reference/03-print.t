@@ -1,7 +1,9 @@
 use strict;
 use warnings;
 
-use Test::More 'tests' => 2;
+use English;
+use Error::Pure::Utils qw(clean);
+use Test::More 'tests' => 3;
 use Test::NoWarnings;
 use Wikibase::Datatype::Print::Reference;
 use Wikibase::Datatype::Reference;
@@ -22,3 +24,11 @@ my $obj = Wikibase::Datatype::Reference->new(
 );
 my $ret = Wikibase::Datatype::Print::Reference::print($obj);
 is($ret, 'P11: text', 'Get printed value.');
+
+# Test.
+eval {
+	Wikibase::Datatype::Print::Reference::print('bad');
+};
+is($EVAL_ERROR, "Object isn't 'Wikibase::Datatype::Reference'.\n",
+	"Object isn't 'Wikibase::Datatype::Reference'.");
+clean();
