@@ -34,14 +34,14 @@ sub print {
 	my ($label) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->labels};
 	if (defined $label) {
 		push @ret, 'Label: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($label);
+			Wikibase::Datatype::Print::Value::Monolingual::print($label, $opts_hr);
 	}
 
 	# Description.
 	my ($description) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->descriptions};
 	if (defined $description) {
 		push @ret, 'Description: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($description);
+			Wikibase::Datatype::Print::Value::Monolingual::print($description, $opts_hr);
 	}
 
 	# Statements.

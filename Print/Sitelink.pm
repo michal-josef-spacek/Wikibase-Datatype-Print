@@ -15,7 +15,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
 
 	if (! $obj->isa('Wikibase::Datatype::Sitelink')) {
 		err "Object isn't 'Wikibase::Datatype::Sitelink'.";
@@ -29,7 +29,7 @@ sub print {
 		$ret .= ' ('.$obj->site.')';
 	}
 	if (@{$obj->badges}) {
-		my @print = map { Wikibase::Datatype::Print::Value::Item::print($_) } @{$obj->badges};
+		my @print = map { Wikibase::Datatype::Print::Value::Item::print($_, $opts_hr) } @{$obj->badges};
 		$ret .= ' ['.(join ' ', @print).']';
 	}
 

@@ -16,7 +16,11 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
+
+	if (! defined $opts_hr) {
+		$opts_hr = {};
+	}
 
 	if (! $obj->isa('Wikibase::Datatype::Lexeme')) {
 		err "Object isn't 'Wikibase::Datatype::Lexeme'.";
@@ -30,7 +34,7 @@ sub print {
 	my ($lemma) = @{$obj->lemmas};
 	if (defined $lemma) {
 		push @ret, 'Lemmas: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($lemma);
+			Wikibase::Datatype::Print::Value::Monolingual::print($lemma, $opts_hr);
 	}
 
 	# Language.
@@ -50,7 +54,7 @@ sub print {
 	# Statements.
 	my @statements;
 	foreach my $statement (@{$obj->statements}) {
-		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement);
+		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement, $opts_hr);
 	}
 	if (@statements) {
 		push @ret, (
@@ -62,7 +66,7 @@ sub print {
 	# Senses.
 	my @senses;
 	foreach my $sense (@{$obj->senses}) {
-		push @senses, map { '  '.$_ } Wikibase::Datatype::Print::Sense::print($sense);
+		push @senses, map { '  '.$_ } Wikibase::Datatype::Print::Sense::print($sense, $opts_hr);
 	}
 	if (@senses) {
 		push @ret, (
@@ -74,7 +78,7 @@ sub print {
 	# Forms.
 	my @forms;
 	foreach my $form (@{$obj->forms}) {
-		push @forms, map { '  '.$_ } Wikibase::Datatype::Print::Form::print($form);
+		push @forms, map { '  '.$_ } Wikibase::Datatype::Print::Form::print($form, $opts_hr);
 	}
 	if (@forms) {
 		push @ret, (

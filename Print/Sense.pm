@@ -14,7 +14,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
 
 	if (! $obj->isa('Wikibase::Datatype::Sense')) {
 		err "Object isn't 'Wikibase::Datatype::Sense'.";
@@ -29,7 +29,7 @@ sub print {
 	my @glosses;
 	foreach my $glosse (@{$obj->glosses}) {
 		push @glosses, map { '  '.$_ }
-			Wikibase::Datatype::Print::Value::Monolingual::print($glosse);
+			Wikibase::Datatype::Print::Value::Monolingual::print($glosse, $opts_hr);
 	}
 	if (@glosses) {
 		push @ret, (
@@ -41,7 +41,7 @@ sub print {
 	# Statements.
 	my @statements;
 	foreach my $statement (@{$obj->statements}) {
-		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement);
+		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement, $opts_hr);
 	}
 	if (@statements) {
 		push @ret, (

@@ -18,6 +18,10 @@ sub print {
 	my ($obj, $opts_hr) = @_;
 
 	if (! defined $opts_hr) {
+		$opts_hr = {};
+	}
+
+	if (! defined $opts_hr) {
 		$opts_hr->{'lang'} = 'en';
 	}
 
@@ -34,7 +38,7 @@ sub print {
 	my ($representation) = @{$obj->representations};
 	if (defined $representation) {
 		push @ret, 'Representation: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($representation);
+			Wikibase::Datatype::Print::Value::Monolingual::print($representation, $opts_hr);
 	}
 
 	# Grammatical features
@@ -50,7 +54,7 @@ sub print {
 	# Statements.
 	my @statements;
 	foreach my $statement (@{$obj->statements}) {
-		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement);
+		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement, $opts_hr);
 	}
 	if (@statements) {
 		push @ret, (

@@ -12,7 +12,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
 
 	if (! $obj->isa('Wikibase::Datatype::Value::Globecoordinate')) {
 		err "Object isn't 'Wikibase::Datatype::Value::Globecoordinate'.";

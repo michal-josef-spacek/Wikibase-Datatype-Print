@@ -19,7 +19,7 @@ Readonly::Array our @EXPORT_OK => qw(print);
 our $VERSION = 0.01;
 
 sub print {
-	my $obj = shift;
+	my ($obj, $opts_hr) = @_;
 
 	if (! $obj->isa('Wikibase::Datatype::Value')) {
 		err "Object isn't 'Wikibase::Datatype::Value'.";
@@ -28,19 +28,19 @@ sub print {
 	my $type = $obj->type;
 	my $ret;
 	if ($type eq 'globecoordinate') {
-		$ret = Wikibase::Datatype::Print::Value::Globecoordinate::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::Globecoordinate::print($obj, $opts_hr);
 	} elsif ($type eq 'item') {
-		$ret = Wikibase::Datatype::Print::Value::Item::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::Item::print($obj, $opts_hr);
 	} elsif ($type eq 'monolingualtext') {
-		$ret = Wikibase::Datatype::Print::Value::Monolingual::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::Monolingual::print($obj, $opts_hr);
 	} elsif ($type eq 'property') {
-		$ret = Wikibase::Datatype::Print::Value::Property::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::Property::print($obj, $opts_hr);
 	} elsif ($type eq 'quantity') {
-		$ret = Wikibase::Datatype::Print::Value::Quantity::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::Quantity::print($obj, $opts_hr);
 	} elsif ($type eq 'string') {
-		$ret = Wikibase::Datatype::Print::Value::String::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::String::print($obj, $opts_hr);
 	} elsif ($type eq 'time') {
-		$ret = Wikibase::Datatype::Print::Value::Time::print($obj);
+		$ret = Wikibase::Datatype::Print::Value::Time::print($obj, $opts_hr);
 	} else {
 		err "Type '$type' is unsupported.";
 	}

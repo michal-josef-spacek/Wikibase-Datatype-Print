@@ -31,7 +31,7 @@ sub print {
 
 	my $ret = $obj->property.$property_name.': ';
 	if ($obj->snaktype eq 'value') {
-		$ret .= Wikibase::Datatype::Print::Value::print($obj->datavalue);
+		$ret .= Wikibase::Datatype::Print::Value::print($obj->datavalue, $opts_hr);
 	} elsif ($obj->snaktype eq 'novalue') {
 		$ret .= 'no value';
 	} elsif ($obj->snaktype eq 'somevalue') {
