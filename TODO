@@ -7,7 +7,6 @@ TODO
 jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
 jeden.
 11. Add ansi color support.
-15. Rewrite Item tests to use Fixtures.
 16.
 
 Applied
@@ -38,4 +37,7 @@ OK [20220625] skim
 OK [20220625] skim
 
 14. Add MediainfoStatement.
+OK [20220625] skim
+
+15. Rewrite Item tests to use Fixtures.
 OK [20220625] skim

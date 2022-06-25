@@ -8,6 +8,7 @@ build_requires:
   ExtUtils::MakeMaker: 6.59
   Test::More: 0
   Test::NoWarnings: 0
+  Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog: 0.16
   Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman: 0.15
   Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human: 0.15
   Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human: 0.15
