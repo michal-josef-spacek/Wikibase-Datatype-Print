@@ -11,7 +11,15 @@ build_requires:
   Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman: 0.15
   Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human: 0.15
   Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human: 0.15
+  Unicode::UTF8: 0
   Wikibase::Cache::Backend::Basic: 0
+  Wikibase::Datatype: 0.12
+  Wikibase::Datatype::Form: 0
+  Wikibase::Datatype::Snak: 0
+  Wikibase::Datatype::Statement: 0
+  Wikibase::Datatype::Value::Item: 0
+  Wikibase::Datatype::Value::Monolingual: 0
+  Wikibase::Datatype::Value::String: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module

@@ -34,7 +34,14 @@ test_requires 'Test::NoWarnings' => 0;
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman' => 0.15;
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human' => 0.15;
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human' => 0.15;
+test_requires 'Unicode::UTF8' => 0;
 test_requires 'Wikibase::Cache::Backend::Basic' => 0;
+test_requires 'Wikibase::Datatype::Form' => 0;
+test_requires 'Wikibase::Datatype::Snak' => 0;
+test_requires 'Wikibase::Datatype::Statement' => 0;
+test_requires 'Wikibase::Datatype::Value::Item' => 0;
+test_requires 'Wikibase::Datatype::Value::Monolingual' => 0;
+test_requires 'Wikibase::Datatype::Value::String' => 0;
 tests_recursive;
 version '0.01';
 
