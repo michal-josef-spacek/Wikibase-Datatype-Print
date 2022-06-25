@@ -31,6 +31,7 @@ test_requires 'English' => 0;
 test_requires 'Error::Pure::Utils' => 0;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
+test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman' => 0.15;
 test_requires 'Wikibase::Cache::Backend::Basic' => 0;
 tests_recursive;
 version '0.01';

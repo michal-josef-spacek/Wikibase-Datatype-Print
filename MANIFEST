@@ -45,6 +45,7 @@ t/Wikibase-Datatype-Print-Lexeme/02-version.t
 t/Wikibase-Datatype-Print-Lexeme/03-print.t
 t/Wikibase-Datatype-Print-Mediainfo/01-use.t
 t/Wikibase-Datatype-Print-Mediainfo/02-version.t
+t/Wikibase-Datatype-Print-Mediainfo/03-print.t
 t/Wikibase-Datatype-Print-Property/01-use.t
 t/Wikibase-Datatype-Print-Property/02-version.t
 t/Wikibase-Datatype-Print-Property/03-print.t

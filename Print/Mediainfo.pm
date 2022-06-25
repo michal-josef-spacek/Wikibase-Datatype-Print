@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use Readonly;
-use Wikibase::Datatype::Print::Statement;
+use Wikibase::Datatype::Print::MediainfoStatement;
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -17,6 +17,10 @@ sub print {
 	my ($obj, $opts_hr) = @_;
 
 	if (! defined $opts_hr) {
+		$opts_hr = {};
+	}
+
+	if (! exists $opts_hr->{'lang'}) {
 		$opts_hr->{'lang'} = 'en';
 	}
 
@@ -25,11 +29,31 @@ sub print {
 	}
 
 	my @ret;
+
+	# Label.
 	my ($label) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->labels};
-	push @ret, $label->value;
-	# TODO
+	if (defined $label) {
+		push @ret, 'Label: '.
+			Wikibase::Datatype::Print::Value::Monolingual::print($label);
+	}
+
+	# Description.
+	my ($description) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->descriptions};
+	if (defined $description) {
+		push @ret, 'Description: '.
+			Wikibase::Datatype::Print::Value::Monolingual::print($description);
+	}
+
+	# Statements.
+	my @statements;
 	foreach my $statement (@{$obj->statements}) {
-		push @ret, Wikibase::Datatype::Print::Statement::print($statement);
+		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::MediainfoStatement::print($statement, $opts_hr);
+	}
+	if (@statements) {
+		push @ret, (
+			'Statements:',
+			@statements,
+		);
 	}
 
 	return wantarray ? @ret : (join "\n", @ret);
