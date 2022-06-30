@@ -7,6 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Statement;
+use Wikibase::Datatype::Print::Utils qw(print_statements);
 use Wikibase::Datatype::Print::Value::Item;
 use Wikibase::Datatype::Print::Value::Monolingual;
 
@@ -52,16 +53,8 @@ sub print {
 	}
 
 	# Statements.
-	my @statements;
-	foreach my $statement (@{$obj->statements}) {
-		push @statements, map { '  '.$_ } Wikibase::Datatype::Print::Statement::print($statement, $opts_hr);
-	}
-	if (@statements) {
-		push @ret, (
-			'Statements:',
-			@statements,
-		);
-	}
+	push @ret, print_statements($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Statement::print);
 
 	return wantarray ? @ret : (join "\n", @ret);
 }

@@ -27,6 +27,7 @@ Print/Sense.pm
 Print/Sitelink.pm
 Print/Snak.pm
 Print/Statement.pm
+Print/Utils.pm
 Print/Value.pm
 Print/Value/Globecoordinate.pm
 Print/Value/Item.pm
@@ -72,6 +73,9 @@ t/Wikibase-Datatype-Print-Snak/03-print.t
 t/Wikibase-Datatype-Print-Statement/01-use.t
 t/Wikibase-Datatype-Print-Statement/02-version.t
 t/Wikibase-Datatype-Print-Statement/03-print.t
+t/Wikibase-Datatype-Print-Utils/01-use.t
+t/Wikibase-Datatype-Print-Utils/02-version.t
+t/Wikibase-Datatype-Print-Utils/03-print_statements.t
 t/Wikibase-Datatype-Print-Value-Globecoordinate/01-use.t
 t/Wikibase-Datatype-Print-Value-Globecoordinate/02-version.t
 t/Wikibase-Datatype-Print-Value-Globecoordinate/03-print.t
@@ -122,6 +126,8 @@ xt/Wikibase-Datatype-Print-Snak/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Snak/02-pod.t
 xt/Wikibase-Datatype-Print-Statement/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Statement/02-pod.t
+xt/Wikibase-Datatype-Print-Utils/01-pod_coverage.t
+xt/Wikibase-Datatype-Print-Utils/02-pod.t
 xt/Wikibase-Datatype-Print-Value-Globecoordinate/01-pod_coverage.t
 xt/Wikibase-Datatype-Print-Value-Globecoordinate/02-pod.t
 xt/Wikibase-Datatype-Print-Value-Item/01-pod_coverage.t
