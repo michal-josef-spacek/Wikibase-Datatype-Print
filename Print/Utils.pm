@@ -7,26 +7,33 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(print_statements);
+Readonly::Array our @EXPORT_OK => qw(print_common print_statements);
 
 our $VERSION = 0.01;
 
-sub print_statements {
-	my ($obj, $opts_hr, $statement_cb) = @_;
+sub print_common {
+	my ($obj, $opts_hr, $list_method, $print_cb, $title) = @_;
 
 	my @ret;
-	my @statements;
-	foreach my $statement (@{$obj->statements}) {
-		push @statements, map { '  '.$_ } $statement_cb->($statement, $opts_hr);
+	my @values;
+	foreach my $list_item (@{$obj->$list_method}) {
+		push @values, map { '  '.$_ } $print_cb->($list_item, $opts_hr);
 	}
-	if (@statements) {
+	if (@values) {
 		push @ret, (
-			'Statements:',
-			@statements,
+			$title.':',
+			@values,
 		);
 	}
 
 	return @ret;
+}
+
+sub print_statements {
+	my ($obj, $opts_hr, $statement_cb) = @_;
+
+	return print_common($obj, $opts_hr, 'statements', $statement_cb,
+		'Statements');
 }
 
 1;
