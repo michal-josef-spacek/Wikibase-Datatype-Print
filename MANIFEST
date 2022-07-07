@@ -78,8 +78,9 @@ t/Wikibase-Datatype-Print-Utils/02-version.t
 t/Wikibase-Datatype-Print-Utils/03-print_common.t
 t/Wikibase-Datatype-Print-Utils/04-print_forms.t
 t/Wikibase-Datatype-Print-Utils/05-print_glosses.t
-t/Wikibase-Datatype-Print-Utils/06-print_sitelinks.t
-t/Wikibase-Datatype-Print-Utils/07-print_statements.t
+t/Wikibase-Datatype-Print-Utils/07-print_senses.t
+t/Wikibase-Datatype-Print-Utils/07-print_sitelinks.t
+t/Wikibase-Datatype-Print-Utils/08-print_statements.t
 t/Wikibase-Datatype-Print-Value-Globecoordinate/01-use.t
 t/Wikibase-Datatype-Print-Value-Globecoordinate/02-version.t
 t/Wikibase-Datatype-Print-Value-Globecoordinate/03-print.t
