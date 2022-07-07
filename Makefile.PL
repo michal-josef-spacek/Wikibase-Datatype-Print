@@ -37,6 +37,7 @@ test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogC
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman' => 0.15;
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human' => 0.15;
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human' => 0.15;
+test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Property::Wikidata::InstanceOf' => 0.17;
 test_requires 'Unicode::UTF8' => 0;
 test_requires 'Wikibase::Cache::Backend::Basic' => 0;
 test_requires 'Wikibase::Datatype::Form' => 0;

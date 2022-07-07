@@ -16,6 +16,9 @@ my $right_ret = decode_utf8(<<'END');
 Data type: wikibase-item
 Label: instance of (en)
 Description: that class of which this subject is a particular example and member (en)
+Aliases:
+  is a (en)
+  is an (en)
 Statements:
   P31: Q32753077 (normal)
 END
