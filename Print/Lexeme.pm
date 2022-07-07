@@ -9,7 +9,7 @@ use Readonly;
 use Wikibase::Datatype::Print::Form;
 use Wikibase::Datatype::Print::Sense;
 use Wikibase::Datatype::Print::Statement;
-use Wikibase::Datatype::Print::Utils qw(print_forms print_statements);
+use Wikibase::Datatype::Print::Utils qw(print_forms print_senses print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -57,16 +57,8 @@ sub print {
 		\&Wikibase::Datatype::Print::Statement::print);
 
 	# Senses.
-	my @senses;
-	foreach my $sense (@{$obj->senses}) {
-		push @senses, map { '  '.$_ } Wikibase::Datatype::Print::Sense::print($sense, $opts_hr);
-	}
-	if (@senses) {
-		push @ret, (
-			'Senses:',
-			@senses,
-		);
-	}
+	push @ret, print_senses($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Sense::print);
 
 	# Forms.
 	push @ret, print_forms($obj, $opts_hr,
