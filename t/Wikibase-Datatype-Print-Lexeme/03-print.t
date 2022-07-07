@@ -29,7 +29,7 @@ Language: Q9056
 Lexical category: Q1084
 Statements:
   P5185: Q499327 (normal)
-   References
+  References:
     P248: Q53919
     P214: 113230702
     P813: 07 December 2013 (Q1985727)

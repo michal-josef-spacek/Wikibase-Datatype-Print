@@ -8,6 +8,7 @@ use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Reference;
 use Wikibase::Datatype::Print::Snak;
+use Wikibase::Datatype::Print::Utils qw(print_references);
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -26,16 +27,10 @@ sub print {
 	foreach my $property_snak (@{$obj->property_snaks}) {
 		push @ret, ' '.Wikibase::Datatype::Print::Snak::print($property_snak, $opts_hr);
 	}
-	my @ref;
-	foreach my $reference (@{$obj->references}) {
-		push @ref, map { '  '.$_ } Wikibase::Datatype::Print::Reference::print($reference, $opts_hr);
-	}
-	if (@ref) {
-		push @ret, (
-			' References',
-			@ref,
-		);
-	}
+
+	# References.
+	push @ret, print_references($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Reference::print);
 
 	return wantarray ? @ret : (join "\n", @ret);
 }
