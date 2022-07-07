@@ -69,7 +69,7 @@ sub print {
 	}
 
 	# Forms.
-	push @ret, print_statements($obj, $opts_hr,
+	push @ret, print_forms($obj, $opts_hr,
 		\&Wikibase::Datatype::Print::Form::print);
 
 	return wantarray ? @ret : (join "\n", @ret);
