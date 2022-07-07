@@ -6,9 +6,7 @@ TODO
 jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
 jeden.
 11. Add ansi color support.
-16. Add print_glosses() helper.
 17. Add print_senses() helper.
-18. Add print_forms() helper.
 19.
 
 Applied
@@ -46,3 +44,9 @@ OK [20220625] skim
 
 8. Udelat Utils, kde bude tisknuti statements (Form, Sense a dalsi)
 OK [20220701] skim
+
+16. Add print_glosses() helper.
+OK [20220707] skim
+
+18. Add print_forms() helper.
+OK [20220707] skim
