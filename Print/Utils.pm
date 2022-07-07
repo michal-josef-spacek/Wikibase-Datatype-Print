@@ -8,7 +8,7 @@ use Error::Pure qw(err);
 use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(print_common print_forms print_glosses
-	print_senses print_sitelinks print_statements);
+	print_references print_senses print_sitelinks print_statements);
 
 our $VERSION = 0.01;
 
@@ -42,6 +42,13 @@ sub print_glosses {
 
 	return print_common($obj, $opts_hr, 'glosses', $glosses_cb,
 		'Glosses');
+}
+
+sub print_references {
+	my ($obj, $opts_hr, $reference_cb) = @_;
+
+	return print_common($obj, $opts_hr, 'references', $reference_cb,
+		'References');
 }
 
 sub print_senses {
