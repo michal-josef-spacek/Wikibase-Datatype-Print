@@ -28,12 +28,7 @@ Lemmas: pes (cs)
 Language: Q9056
 Lexical category: Q1084
 Statements:
-  P31: Q5 (normal)
-   References
-    P248: Q53919
-    P214: 113230702
-    P813: 07 December 2013 (Q1985727)
-  P21: Q6581097 (normal)
+  P5185: Q499327 (normal)
    References
     P248: Q53919
     P214: 113230702
