@@ -6,7 +6,8 @@ TODO
 jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
 jeden.
 11. Add ansi color support.
-19.
+19. Helper print_aliases().
+20.
 
 Applied
 =======
