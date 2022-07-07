@@ -8,7 +8,7 @@ use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Sitelink;
 use Wikibase::Datatype::Print::Statement;
-use Wikibase::Datatype::Print::Utils qw(print_statements);
+use Wikibase::Datatype::Print::Utils qw(print_sitelinks print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -59,16 +59,8 @@ sub print {
 	}
 
 	# Sitelinks.
-	my @sitelinks = @{$obj->sitelinks};
-	if (@sitelinks) {
-		push @ret, (
-			'Sitelinks:',
-		);
-		foreach my $sitelink (@sitelinks) {
-			push @ret, map { '  '.$_ }
-				Wikibase::Datatype::Print::Sitelink::print($sitelink, $opts_hr);
-		}
-	}
+	push @ret, print_sitelinks($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Sitelink::print);
 
 	# Statements.
 	push @ret, print_statements($obj, $opts_hr,
