@@ -7,8 +7,8 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(print_common print_forms print_glosses
-	print_references print_senses print_sitelinks print_statements);
+Readonly::Array our @EXPORT_OK => qw(print_aliases print_common print_forms
+	print_glosses print_references print_senses print_sitelinks print_statements);
 
 our $VERSION = 0.01;
 
@@ -35,6 +35,16 @@ sub print_common {
 	}
 
 	return @ret;
+}
+
+sub print_aliases {
+	my ($obj, $opts_hr, $alias_cb) = @_;
+
+	return print_common($obj, $opts_hr, 'aliases', $alias_cb,
+		'Aliases', sub {
+			grep { $_->language eq $opts_hr->{'lang'} } @_
+		},
+	);
 }
 
 sub print_forms {
