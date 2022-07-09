@@ -6,7 +6,6 @@ TODO
 jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
 jeden.
 11. Add ansi color support.
-20. Add print_descriptions()
 21. Fix print of Snak with qualifier.
 22.
 
@@ -56,4 +55,7 @@ OK [20220707] skim
 OK [20220707] skim
 
 19. Helper print_aliases().
+OK [20220709] skim
+
+20. Add print_descriptions()
 OK [20220709] skim
