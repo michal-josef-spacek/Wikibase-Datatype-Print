@@ -13,7 +13,8 @@ Readonly::Array our @EXPORT_OK => qw(print_aliases print_common print_forms
 our $VERSION = 0.01;
 
 sub print_common {
-	my ($obj, $opts_hr, $list_method, $print_cb, $title, $input_cb) = @_;
+	my ($obj, $opts_hr, $list_method, $print_cb, $title, $input_cb,
+		$flag_one_line) = @_;
 
 	my @input;
 	if (defined $input_cb) {
@@ -24,14 +25,25 @@ sub print_common {
 
 	my @ret;
 	my @values;
+	my $separator = '  ';
+	if ($flag_one_line) {
+		$separator = ' ';
+	}
 	foreach my $list_item (@input) {
-		push @values, map { '  '.$_ } $print_cb->($list_item, $opts_hr);
+		push @values, map { $separator.$_ } $print_cb->($list_item, $opts_hr);
 	}
 	if (@values) {
-		push @ret, (
-			$title.':',
-			@values,
-		);
+		if ($flag_one_line) {
+			if (@values > 1) {
+				err "Multiple values are printed to one line.";
+			}
+			push @ret, $title.':'.$values[0];
+		} else {
+			push @ret, (
+				$title.':',
+				@values,
+			);
+		}
 	}
 
 	return @ret;

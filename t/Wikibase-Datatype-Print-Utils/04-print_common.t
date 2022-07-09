@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Form::Wikidata::DogCzechSingular;
 use Unicode::UTF8 qw(decode_utf8);
@@ -103,4 +103,47 @@ is_deeply(
 		'  dog (en)',
 	],
 	'Print commons test (aliases - en).',
+);
+
+# Test.
+$obj = Wikibase::Datatype::Item->new(
+	'labels' => [
+		Wikibase::Datatype::Value::Monolingual->new(
+			'language' => 'en',
+			'value' => 'label',
+		),
+	],
+);
+@ret = print_common($obj, {},
+	'labels',
+	\&Wikibase::Datatype::Print::Value::Monolingual::print,
+	'Label', sub { grep { $_->language eq 'en' } @_ }, 1);
+is_deeply(
+	\@ret,
+	[
+		'Label: label (en)',
+	],
+	'Print commons test (labels - one line).',
+);
+
+# Test.
+$obj = Wikibase::Datatype::Item->new(
+	'labels' => [
+		Wikibase::Datatype::Value::Monolingual->new(
+			'language' => 'en',
+			'value' => 'label',
+		),
+	],
+);
+@ret = print_common($obj, {},
+	'labels',
+	\&Wikibase::Datatype::Print::Value::Monolingual::print,
+	'Label', sub { grep { $_->language eq 'en' } @_ }, 0);
+is_deeply(
+	\@ret,
+	[
+		'Label:',
+		'  label (en)',
+	],
+	'Print commons test (labels - multiple lines).',
 );
