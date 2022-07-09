@@ -7,7 +7,8 @@ jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
 jeden.
 11. Add ansi color support.
 21. Fix print of Snak with qualifier.
-22.
+22. Add print_represenations() helper.
+23.
 
 Applied
 =======
