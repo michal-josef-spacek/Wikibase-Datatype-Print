@@ -6,7 +6,9 @@ TODO
 jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
 jeden.
 11. Add ansi color support.
-20.
+20. Add print_descriptions()
+21. Fix print of Snak with qualifier.
+22.
 
 Applied
 =======
