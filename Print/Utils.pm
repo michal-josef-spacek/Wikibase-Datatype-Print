@@ -13,11 +13,18 @@ Readonly::Array our @EXPORT_OK => qw(print_common print_forms print_glosses
 our $VERSION = 0.01;
 
 sub print_common {
-	my ($obj, $opts_hr, $list_method, $print_cb, $title) = @_;
+	my ($obj, $opts_hr, $list_method, $print_cb, $title, $input_cb) = @_;
+
+	my @input;
+	if (defined $input_cb) {
+		@input = map { $input_cb->($_) } @{$obj->$list_method};
+	} else {
+		@input = @{$obj->$list_method};
+	}
 
 	my @ret;
 	my @values;
-	foreach my $list_item (@{$obj->$list_method}) {
+	foreach my $list_item (@input) {
 		push @values, map { '  '.$_ } $print_cb->($list_item, $opts_hr);
 	}
 	if (@values) {
