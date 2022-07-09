@@ -8,8 +8,8 @@ use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Sitelink;
 use Wikibase::Datatype::Print::Statement;
-use Wikibase::Datatype::Print::Utils qw(print_aliases print_labels print_sitelinks
-	print_statements);
+use Wikibase::Datatype::Print::Utils qw(print_aliases print_descriptions
+	print_labels print_sitelinks print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -38,11 +38,8 @@ sub print {
 		\&Wikibase::Datatype::Print::Value::Monolingual::print);
 
 	# Description.
-	my ($description) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->descriptions};
-	if (defined $description) {
-		push @ret, 'Description: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($description, $opts_hr);
-	}
+	push @ret, print_descriptions($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Value::Monolingual::print);
 
 	# Aliases.
 	push @ret, print_aliases($obj, $opts_hr,

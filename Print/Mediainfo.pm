@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::MediainfoStatement;
-use Wikibase::Datatype::Print::Utils qw(print_statements);
+use Wikibase::Datatype::Print::Utils qw(print_descriptions print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -39,11 +39,8 @@ sub print {
 	}
 
 	# Description.
-	my ($description) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->descriptions};
-	if (defined $description) {
-		push @ret, 'Description: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($description, $opts_hr);
-	}
+	push @ret, print_descriptions($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Value::Monolingual::print);
 
 	# Statements.
 	push @ret, print_statements($obj, $opts_hr,
