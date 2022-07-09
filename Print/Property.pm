@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Statement;
-use Wikibase::Datatype::Print::Utils qw(print_aliases print_statements);
+use Wikibase::Datatype::Print::Utils qw(print_aliases print_labels print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -34,11 +34,8 @@ sub print {
 	);
 
 	# Label.
-	my ($label) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->labels};
-	if (defined $label) {
-		push @ret, 'Label: '.
-			Wikibase::Datatype::Print::Value::Monolingual::print($label, $opts_hr);
-	}
+	push @ret, print_labels($obj, $opts_hr,
+		\&Wikibase::Datatype::Print::Value::Monolingual::print);
 
 	# Description.
 	my ($description) = grep { $_->language eq $opts_hr->{'lang'} } @{$obj->descriptions};
