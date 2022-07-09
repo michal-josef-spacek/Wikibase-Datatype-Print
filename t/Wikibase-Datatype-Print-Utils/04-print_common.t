@@ -6,10 +6,10 @@ use Test::NoWarnings;
 use Test::Shared::Fixture::Wikibase::Datatype::Form::Wikidata::DogCzechSingular;
 use Unicode::UTF8 qw(decode_utf8);
 use Wikibase::Datatype::Item;
-use Wikibase::Datatype::Value::Monolingual;
 use Wikibase::Datatype::Print::Statement;
 use Wikibase::Datatype::Print::Utils qw(print_common);
 use Wikibase::Datatype::Print::Value::Monolingual;
+use Wikibase::Datatype::Value::Monolingual;
 
 # Test.
 my $obj = Test::Shared::Fixture::Wikibase::Datatype::Form::Wikidata::DogCzechSingular->new;
