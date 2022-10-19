@@ -30,7 +30,14 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Mediainfo'.";
 	}
 
-	my @ret;
+	my @ret = (
+		defined $obj->id ? 'Id: '.$obj->id : (),
+		defined $obj->title ? 'Title: '.$obj->title : (),
+		defined $obj->ns ? 'NS: '.$obj->ns : (),
+		defined $obj->lastrevid ? 'Last revision id: '.$obj->lastrevid : (),
+		defined $obj->modified ? 'Date of modification: '.$obj->modified : (),
+		defined $obj->page_id ? 'Page ID: '.$obj->page_id : (),
+	);
 
 	# Label.
 	push @ret, print_labels($obj, $opts_hr,

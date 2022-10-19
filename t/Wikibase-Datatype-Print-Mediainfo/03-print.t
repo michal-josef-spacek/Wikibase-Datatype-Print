@@ -12,6 +12,11 @@ use Wikibase::Datatype::Print::Mediainfo;
 my $obj = Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman->new;
 my $ret = Wikibase::Datatype::Print::Mediainfo::print($obj);
 my $right_ret = <<'END';
+Id: M10031710
+Title: File:Douglas adams portrait cropped.jpg
+NS: 6
+Last revision id: 617544224
+Date of modification: 2021-12-30T08:38:29Z
 Label: Portrait of Douglas Adams (en)
 Statements:
   P180: Q42 (normal)
