@@ -37,6 +37,7 @@ Print/Value/Quantity.pm
 Print/Value/String.pm
 Print/Value/Time.pm
 README
+SIGNATURE
 t/Wikibase-Datatype-Print-Form/01-use.t
 t/Wikibase-Datatype-Print-Form/02-version.t
 t/Wikibase-Datatype-Print-Form/03-print.t
