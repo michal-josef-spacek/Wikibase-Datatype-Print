@@ -10,7 +10,7 @@ use Wikibase::Datatype::Print::MediainfoSnak;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 sub print {
 	my ($obj, $opts_hr) = @_;
