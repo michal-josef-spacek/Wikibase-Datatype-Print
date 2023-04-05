@@ -23,7 +23,6 @@ requires 'DateTime::Format::ISO8601' => 0;
 requires 'Error::Pure' => 0.15;
 requires 'List::MoreUtils' => 0;
 requires 'Unicode::UTF8' => 0;
-requires 'Wikibase::Cache' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Wikibase-Datatype-Print';
