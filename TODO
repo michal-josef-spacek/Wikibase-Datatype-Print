@@ -9,7 +9,6 @@ jeden.
 21. Fix print of Snak with qualifier.
 22. Add print_represenations() helper.
 23. Add doc.
-24. Remove List::MoreUtils
 25.
 
 Applied
@@ -62,3 +61,6 @@ OK [20220709] skim
 
 20. Add print_descriptions()
 OK [20220709] skim
+
+24. Remove List::MoreUtils
+OK [20230406] skim

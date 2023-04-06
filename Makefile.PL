@@ -21,7 +21,6 @@ recursive_author_tests('xt');
 requires 'Class::Utils' => 0.03;
 requires 'DateTime::Format::ISO8601' => 0;
 requires 'Error::Pure' => 0.15;
-requires 'List::MoreUtils' => 0;
 requires 'Unicode::UTF8' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print';

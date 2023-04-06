@@ -1,4 +1,5 @@
 0.02
+ - Remove List::MoreUtils from dependencies.
  - Remove Wikibase::Cache from dependencies.
  - Update copyright years.
 
