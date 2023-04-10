@@ -7,6 +7,7 @@
  - Add tests for Wikibase::Datatype::Print::Value::Item.
  - Add tests for Wikibase::Datatype::Print::Value::Property.
  - Fix doc description for Wikibase::Datatype::Print::Value::Globecoordinate.
+ - Fix error check in Wikibase::Datatype::Print::Form.
 
 0.02 2023-04-10T11:37:10+02:00
  - Add doc for Wikibase::Datatype::Print::Value::Globecoordinate.

@@ -22,7 +22,7 @@ sub print {
 		$opts_hr = {};
 	}
 
-	if (! defined $opts_hr) {
+	if (! exists $opts_hr->{'lang'}) {
 		$opts_hr->{'lang'} = 'en';
 	}
 
