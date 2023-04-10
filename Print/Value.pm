@@ -16,7 +16,7 @@ use Wikibase::Datatype::Print::Value::Time;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 sub print {
 	my ($obj, $opts_hr) = @_;

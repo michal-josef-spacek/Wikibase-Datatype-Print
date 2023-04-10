@@ -15,4 +15,4 @@ my $obj = Wikibase::Datatype::Value::Globecoordinate->new(
 print Wikibase::Datatype::Print::Value::Globecoordinate::print($obj)."\n";
 
 # Output:
-# TODO
+# (49.6398383, 18.1484031)

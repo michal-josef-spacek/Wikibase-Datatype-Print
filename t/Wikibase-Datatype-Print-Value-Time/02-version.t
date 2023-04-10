@@ -6,4 +6,4 @@ use Test::NoWarnings;
 use Wikibase::Datatype::Print::Value::Time;
 
 # Test.
-is($Wikibase::Datatype::Print::Value::Time::VERSION, 0.02, 'Version.');
+is($Wikibase::Datatype::Print::Value::Time::VERSION, 0.03, 'Version.');
