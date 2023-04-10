@@ -46,7 +46,7 @@ SEE ALSO
         TODO
 
     Wikibase::Datatype::Print::Value::Globecoordinate
-        TODO
+        Wikibase globe coordinate pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Item
         TODO

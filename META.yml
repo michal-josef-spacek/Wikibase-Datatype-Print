@@ -35,6 +35,7 @@ meta-spec:
 name: Wikibase-Datatype-Print
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
