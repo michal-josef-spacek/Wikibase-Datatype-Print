@@ -49,7 +49,7 @@ SEE ALSO
         Wikibase globe coordinate item pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Item
-        TODO
+        Wikibase item value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Monolingual
         TODO

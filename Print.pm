@@ -83,7 +83,7 @@ Wikibase globe coordinate item pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Item>
 
-TODO
+Wikibase item value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Monolingual>
 
