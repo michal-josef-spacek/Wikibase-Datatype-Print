@@ -1,4 +1,6 @@
 0.02
+ - Fix dependency to
+   Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog.
  - Remove List::MoreUtils from dependencies.
  - Remove Wikibase::Cache from dependencies.
  - Update copyright years.
