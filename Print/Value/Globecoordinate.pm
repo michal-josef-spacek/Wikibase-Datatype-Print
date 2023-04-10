@@ -9,7 +9,7 @@ use Readonly;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 sub print {
 	my ($obj, $opts_hr) = @_;
@@ -112,6 +112,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.03
+0.04
 
 =cut

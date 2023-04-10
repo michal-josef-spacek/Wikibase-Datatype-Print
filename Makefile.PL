@@ -45,7 +45,7 @@ test_requires 'Wikibase::Datatype::Value::Item' => 0;
 test_requires 'Wikibase::Datatype::Value::Monolingual' => 0;
 test_requires 'Wikibase::Datatype::Value::String' => 0;
 tests_recursive;
-version '0.03';
+version '0.04';
 
 # Run.
 WriteAll();
