@@ -52,7 +52,7 @@ SEE ALSO
         Wikibase item value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Monolingual
-        TODO
+        Wikibase monolingual value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Property
         TODO
