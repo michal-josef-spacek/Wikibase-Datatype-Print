@@ -33,7 +33,7 @@ __END__
 
 =head1 NAME
 
-Wikibase::Datatype::Print::Value::Globecoordinate - Wikibase globe coordinate pretty print helpers.
+Wikibase::Datatype::Print::Value::Globecoordinate - Wikibase globe coordinate value pretty print helpers.
 
 =head1 SYNOPSIS
 

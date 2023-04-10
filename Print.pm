@@ -79,7 +79,7 @@ TODO
 
 =item L<Wikibase::Datatype::Print::Value::Globecoordinate>
 
-Wikibase globe coordinate pretty print helpers.
+Wikibase globe coordinate item pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Item>
 
