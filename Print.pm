@@ -91,7 +91,7 @@ Wikibase monolingual value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Property>
 
-TODO
+Wikibase property value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Quantity>
 

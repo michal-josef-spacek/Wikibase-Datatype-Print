@@ -55,7 +55,7 @@ SEE ALSO
         Wikibase monolingual value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Property
-        TODO
+        Wikibase property value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Quantity
         TODO
