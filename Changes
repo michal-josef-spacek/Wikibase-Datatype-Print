@@ -1,6 +1,7 @@
 0.03
  - Add doc for Wikibase::Datatype::Print::Value::Item.
  - Add doc for Wikibase::Datatype::Print::Value::Monolingual.
+ - Add test for Wikibase::Datatype::Print::Value::Quantity.
  - Add tests for Wikibase::Datatype::Print::Value::Item.
  - Add tests for Wikibase::Datatype::Print::Value::Property.
  - Fix doc description for Wikibase::Datatype::Print::Value::Globecoordinate.
