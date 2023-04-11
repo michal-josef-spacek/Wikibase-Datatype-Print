@@ -99,7 +99,7 @@ Wikibase quantity value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::String>
 
-TODO
+Wikibase string value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Time>
 

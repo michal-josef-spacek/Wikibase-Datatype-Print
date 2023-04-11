@@ -1,5 +1,6 @@
 0.04
  - Add doc for Wikibase::Datatype::Print::Value::Quantity.
+ - Add doc for Wikibase::Datatype::Print::Value::String.
  - Add test for Wikibase::Datatype::Print::Value::Quantity.
  - Fix default options in Wikibase::Datatype::Print::Value::Quantity.
 
