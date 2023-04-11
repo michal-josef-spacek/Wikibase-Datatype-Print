@@ -103,7 +103,7 @@ Wikibase string value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Time>
 
-TODO
+Wikibase time value pretty print helpers.
 
 =back
 

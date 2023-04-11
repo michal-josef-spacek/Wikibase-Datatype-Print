@@ -64,7 +64,7 @@ SEE ALSO
         Wikibase string value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Time
-        TODO
+        Wikibase time value pretty print helpers.
 
 SEE ALSO
     Wikibase::Datatype
