@@ -3,6 +3,7 @@
  - Add doc for Wikibase::Datatype::Print::Value::String.
  - Add test for Wikibase::Datatype::Print::Value::Quantity.
  - Fix default options in Wikibase::Datatype::Print::Value::Quantity.
+ - Fix default options in Wikibase::Datatype::Print::Value::Time.
 
 0.03 2023-04-10T23:11:35+02:00
  - Add doc for Wikibase::Datatype::Print::Value::Item.
