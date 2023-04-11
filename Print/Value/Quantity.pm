@@ -33,7 +33,7 @@ sub print {
 	# Unit.
 	my $unit;
 	if ($obj->unit) {
-		if (exists $opts_hr->{'print_name'} && $opts_hr->{'print_name'} && exists $opts_hr->{'cb'}) {
+		if ($opts_hr->{'print_name'} && exists $opts_hr->{'cb'}) {
 			$unit = $opts_hr->{'cb'}->get('label', $obj->unit) || $obj->unit;
 		} else {
 			$unit = $obj->unit;
