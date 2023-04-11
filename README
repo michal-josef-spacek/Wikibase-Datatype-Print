@@ -58,7 +58,7 @@ SEE ALSO
         Wikibase property value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::Quantity
-        TODO
+        Wikibase quantity value pretty print helpers.
 
     Wikibase::Datatype::Print::Value::String
         TODO
