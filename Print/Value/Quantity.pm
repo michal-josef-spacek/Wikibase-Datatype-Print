@@ -16,9 +16,10 @@ sub print {
 
 	# Default options.
 	if (! defined $opts_hr) {
-		$opts_hr = {
-			'print_name' => 1,
-		};
+		$opts_hr = {};
+	}
+	if (! exists $opts_hr->{'print_name'}) {
+		$opts_hr->{'print_name'} = 1;
 	}
 
 	if (! $obj->isa('Wikibase::Datatype::Value::Quantity')) {
