@@ -27,8 +27,8 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Value::Time'.";
 	}
 
-	if (exists $opts_hr->{'cb'} && ! $opts_hr->{'cb'}->isa('Wikibase::Cache::Backend')) {
-		err "Option 'cb' must be a instance of Wikibase::Cache::Backend.";
+	if (exists $opts_hr->{'cb'} && ! $opts_hr->{'cb'}->isa('Wikibase::Cache')) {
+		err "Option 'cb' must be a instance of Wikibase::Cache.";
 	}
 
 	# Calendar.
@@ -81,7 +81,7 @@ Returns string.
 
  print():
          Object isn't 'Wikibase::Datatype::Value::Time'.
-         Option 'cb' must be a instance of Wikibase::Cache::Backend.
+         Option 'cb' must be a instance of Wikibase::Cache.
 
 =head1 EXAMPLE1
 
@@ -112,6 +112,7 @@ Returns string.
  use strict;
  use warnings;
 
+ use Wikibase::Cache;
  use Wikibase::Cache::Backend::Basic;
  use Wikibase::Datatype::Print::Value::Time;
  use Wikibase::Datatype::Value::Time;
@@ -123,7 +124,9 @@ Returns string.
  );
 
  # Cache object.
- my $cache = Wikibase::Cache::Backend::Basic->new;
+ my $cache = Wikibase::Cache->new(
+         'backend' => 'Basic',
+ );
 
  # Print.
  print Wikibase::Datatype::Print::Value::Time::print($obj, {

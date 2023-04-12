@@ -1,4 +1,5 @@
 0.05
+ - Fix usage of Wikibase::Cache. Not use backend directly.
 
 0.04 2023-04-11T22:08:03+02:00
  - Add doc for Wikibase::Datatype::Print::Value::Quantity.

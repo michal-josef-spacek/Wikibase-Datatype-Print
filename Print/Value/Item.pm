@@ -18,8 +18,8 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Value::Item'.";
 	}
 
-	if (exists $opts_hr->{'cb'} && ! $opts_hr->{'cb'}->isa('Wikibase::Cache::Backend')) {
-		err "Option 'cb' must be a instance of Wikibase::Cache::Backend.";
+	if (exists $opts_hr->{'cb'} && ! $opts_hr->{'cb'}->isa('Wikibase::Cache')) {
+		err "Option 'cb' must be a instance of Wikibase::Cache.";
 	}
 
 	my $item;
@@ -65,7 +65,7 @@ Returns string.
 
  print():
          Object isn't 'Wikibase::Datatype::Value::Item'.
-         Option 'cb' must be a instance of Wikibase::Cache::Backend.
+         Option 'cb' must be a instance of Wikibase::Cache.
 
 =head1 EXAMPLE
 

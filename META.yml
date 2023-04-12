@@ -15,6 +15,7 @@ build_requires:
   Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human: 0.15
   Test::Shared::Fixture::Wikibase::Datatype::Property::Wikidata::InstanceOf: 0.17
   Unicode::UTF8: 0
+  Wikibase::Cache: 0
   Wikibase::Cache::Backend::Basic: 0
   Wikibase::Datatype: 0.12
   Wikibase::Datatype::Form: 0
