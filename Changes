@@ -1,4 +1,4 @@
-0.05
+0.05 2023-04-15T00:49:16+02:00
  - Add doc for Wikibase::Datatype::Print::Utils.
  - Add doc for Wikibase::Datatype::Print::Value.
  - Add error for bad snaktype to Snak and MediainfoSnak classes.
