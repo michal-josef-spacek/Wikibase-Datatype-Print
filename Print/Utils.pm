@@ -13,6 +13,16 @@ Readonly::Array our @EXPORT_OK => qw(print_aliases print_common print_descriptio
 
 our $VERSION = 0.05;
 
+sub print_aliases {
+	my ($obj, $opts_hr, $alias_cb) = @_;
+
+	return print_common($obj, $opts_hr, 'aliases', $alias_cb,
+		'Aliases', sub {
+			grep { $_->language eq $opts_hr->{'lang'} } @_
+		},
+	);
+}
+
 sub print_common {
 	my ($obj, $opts_hr, $list_method, $print_cb, $title, $input_cb,
 		$flag_one_line) = @_;
@@ -48,16 +58,6 @@ sub print_common {
 	}
 
 	return @ret;
-}
-
-sub print_aliases {
-	my ($obj, $opts_hr, $alias_cb) = @_;
-
-	return print_common($obj, $opts_hr, 'aliases', $alias_cb,
-		'Aliases', sub {
-			grep { $_->language eq $opts_hr->{'lang'} } @_
-		},
-	);
 }
 
 sub print_descriptions {

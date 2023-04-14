@@ -4,6 +4,7 @@
  - Add tests for MediainfoSnak.
  - Fix test requirements.
  - Fix usage of Wikibase::Cache. Not use backend directly.
+ - Sort subroutines in Wikibase::Datatype::Print::Utils.
 
 0.04 2023-04-11T22:08:03+02:00
  - Add doc for Wikibase::Datatype::Print::Value::Quantity.
