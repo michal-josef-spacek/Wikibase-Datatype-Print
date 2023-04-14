@@ -1,4 +1,5 @@
 0.05
+ - Add doc for Wikibase::Datatype::Print::Value.
  - Add error for bad snaktype to Snak and MediainfoSnak classes.
  - Add tests for MediainfoSnak.
  - Fix test requirements.
