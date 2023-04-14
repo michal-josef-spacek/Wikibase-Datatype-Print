@@ -36,7 +36,12 @@ sub print {
 		$ret .= 'no value';
 	} elsif ($obj->snaktype eq 'somevalue') {
 		$ret .= 'unknown value';
+	} else {
+		err 'Bad snaktype.',
+			'snaktype', $obj->snaktype,
+		;
 	}
+
 	return $ret;
 }
 
