@@ -1,5 +1,6 @@
 0.05
  - Add error for bad snaktype to Snak and MediainfoSnak classes.
+ - Add tests for MediainfoSnak.
  - Fix test requirements.
  - Fix usage of Wikibase::Cache. Not use backend directly.
 
