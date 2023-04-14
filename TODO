@@ -10,7 +10,8 @@ jeden.
 22. Add print_represenations() helper.
 23. Add doc.
 25. Fix TODOs in Wikibase::Datatype::Print::Value::Time
-26.
+26. Add examples to Wikibase::Datatype::Print::Utils.
+27.
 
 Applied
 =======
