@@ -71,16 +71,16 @@ sub print_descriptions {
 }
 
 sub print_forms {
-	my ($obj, $opts_hr, $forms_cb) = @_;
+	my ($obj, $opts_hr, $form_cb) = @_;
 
-	return print_common($obj, $opts_hr, 'forms', $forms_cb,
+	return print_common($obj, $opts_hr, 'forms', $form_cb,
 		'Forms');
 }
 
 sub print_glosses {
-	my ($obj, $opts_hr, $glosses_cb) = @_;
+	my ($obj, $opts_hr, $glosse_cb) = @_;
 
-	return print_common($obj, $opts_hr, 'glosses', $glosses_cb,
+	return print_common($obj, $opts_hr, 'glosses', $glosse_cb,
 		'Glosses');
 }
 
