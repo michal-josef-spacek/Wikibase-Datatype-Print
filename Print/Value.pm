@@ -121,9 +121,9 @@ L<Wikibase::Datatype::Print::Value::Time>.
 
 =over
 
-=item L<Wikibase::Datatype::Value::Item>
+=item L<Wikibase::Datatype::Value>
 
-Wikibase item value datatype.
+Wikibase value datatype.
 
 =back
 
