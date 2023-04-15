@@ -24,7 +24,6 @@ clean();
 
 # Test.
 $obj = Wikibase::Datatype::MediainfoSnak->new(
-	'datatype' => 'string',
 	'property' => 'P11',
 	'snaktype' => 'novalue',
 );
@@ -33,7 +32,6 @@ is($ret, 'P11: no value', 'Get snak no value.');
 
 # Test.
 $obj = Wikibase::Datatype::MediainfoSnak->new(
-	'datatype' => 'string',
 	'property' => 'P11',
 	'snaktype' => 'somevalue',
 );
