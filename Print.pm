@@ -59,7 +59,7 @@ TODO
 
 =item L<Wikibase::Datatype::Print::Sitelink>
 
-TODO
+Wikibase sitelink pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Snak>
 

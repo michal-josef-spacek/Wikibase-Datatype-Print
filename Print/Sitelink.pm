@@ -39,3 +39,102 @@ sub print {
 1;
 
 __END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Wikibase::Datatype::Print::Sitelink - Wikibase sitelink pretty print helpers.
+
+=head1 SYNOPSIS
+
+ use Wikibase::Datatype::Print::Sitelink qw(print);
+
+ my $pretty_print_string = print($obj, $opts_hr);
+
+=head1 SUBROUTINES
+
+=head2 C<print>
+
+ my $pretty_print_string = print($obj, $opts_hr);
+
+Construct pretty print output for L<Wikibase::Datatype::Sitelink>
+object.
+
+Returns string.
+
+=head1 ERRORS
+
+ print():
+         Object isn't 'Wikibase::Datatype::Sitelink'.
+
+=head1 EXAMPLE
+
+=for comment filename=create_and_print_sitelink.pl
+
+ use strict;
+ use warnings;
+
+ use Unicode::UTF8 qw(decode_utf8 encode_utf8);
+ use Wikibase::Datatype::Print::Sitelink;
+ use Wikibase::Datatype::Sitelink;
+
+ # Object.
+ my $obj = Wikibase::Datatype::Sitelink->new(
+         'badges' => [
+                 Wikibase::Datatype::Value::Item->new(
+                         'value' => 'Q123',
+                 ),
+         ],
+         'site' => 'cswiki',
+         'title' => decode_utf8('Hlavní strana'),
+ );
+
+ # Print.
+ print encode_utf8(Wikibase::Datatype::Print::Sitelink::print($obj))."\n";
+
+ # Output:
+ # Hlavní strana (cswiki) [Q123]
+
+=head1 DEPENDENCIES
+
+L<Error::Pure>,
+L<Exporter>,
+L<Readonly>,
+L<Wikibase::Datatype::Print::Value::Item>,
+L<Wikibase::Datatype::Sitelink>,
+L<Wikibase::Datatype::Value::Item>.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<Wikibase::Datatype::Sitelink>
+
+Wikibase sitelink datatype.
+
+=back
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/Wikibase-Datatype-Print>
+
+=head1 AUTHOR
+
+Michal Josef Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+© 2020-2023 Michal Josef Špaček
+
+BSD 2-Clause License
+
+=head1 VERSION
+
+0.06
+
+=cut

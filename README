@@ -31,7 +31,7 @@ SEE ALSO
         TODO
 
     Wikibase::Datatype::Print::Sitelink
-        TODO
+        Wikibase sitelink pretty print helpers.
 
     Wikibase::Datatype::Print::Snak
         TODO
