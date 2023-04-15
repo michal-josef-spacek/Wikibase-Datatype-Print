@@ -71,11 +71,11 @@ TODO
 
 =item L<Wikibase::Datatype::Print::Utils>
 
-TODO
+Wikibase pretty print helper utils.
 
 =item L<Wikibase::Datatype::Print::Value>
 
-TODO
+Wikibase value pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Value::Globecoordinate>
 
