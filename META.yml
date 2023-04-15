@@ -19,7 +19,7 @@ build_requires:
   Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human: 0
   Unicode::UTF8: 0
   Wikibase::Cache: 0
-  Wikibase::Cache::Backend::Basic: 0
+  Wikibase::Cache::Backend::Basic: 0.03
   Wikibase::Datatype: 0.12
   Wikibase::Datatype::Form: 0
   Wikibase::Datatype::Item: 0

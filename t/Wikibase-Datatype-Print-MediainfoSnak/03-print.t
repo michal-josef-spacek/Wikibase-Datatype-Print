@@ -3,9 +3,11 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 use Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human;
+use Wikibase::Cache;
+use Wikibase::Cache::Backend::Basic;
 use Wikibase::Datatype::MediainfoSnak;
 use Wikibase::Datatype::Print::MediainfoSnak;
 
@@ -37,3 +39,21 @@ $obj = Wikibase::Datatype::MediainfoSnak->new(
 );
 $ret = Wikibase::Datatype::Print::MediainfoSnak::print($obj);
 is($ret, 'P11: unknown value', 'Get snak somevalue.');
+
+# Test.
+$obj = bless {
+	'property' => 'P11',
+	'snaktype' => 'bad',
+}, 'Wikibase::Datatype::MediainfoSnak';
+eval {
+	Wikibase::Datatype::Print::MediainfoSnak::print($obj);
+};
+is($EVAL_ERROR, "Bad snaktype.\n", "Bad snaktype.");
+
+# Test.
+my $cache = Wikibase::Cache->new;
+$obj = Test::Shared::Fixture::Wikibase::Datatype::MediainfoSnak::Commons::Depicts::Human->new;
+$ret = Wikibase::Datatype::Print::MediainfoSnak::print($obj, {
+	'cache' => $cache,
+});
+is($ret, 'P180 (depicts): Q42', 'Get snak value (depicts: human fixture).');

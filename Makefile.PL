@@ -41,7 +41,7 @@ test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Sense::Wikidata::Dog' 
 test_requires 'Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::InstanceOf::Human' => 0;
 test_requires 'Unicode::UTF8' => 0;
 test_requires 'Wikibase::Cache' => 0;
-test_requires 'Wikibase::Cache::Backend::Basic' => 0;
+test_requires 'Wikibase::Cache::Backend::Basic' => 0.03;
 test_requires 'Wikibase::Datatype::Form' => 0;
 test_requires 'Wikibase::Datatype::Item' => 0;
 test_requires 'Wikibase::Datatype::Lexeme' => 0;
