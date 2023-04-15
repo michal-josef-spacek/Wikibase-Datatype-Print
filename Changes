@@ -1,4 +1,4 @@
-0.06
+0.06 2023-04-15T18:46:48+02:00
  - Add doc for Wikibase::Datatype::Print::Sitelink.
  - Add tests for Wikibase::Datatype::Print::MediainfoSnak.
  - Fix bad object creating in Wikibase::Datatype::MediainfoSnak tests.
