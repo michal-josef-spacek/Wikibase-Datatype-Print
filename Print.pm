@@ -43,7 +43,7 @@ TODO
 
 =item L<Wikibase::Datatype::Print::MediainfoSnak>
 
-TODO
+Wikibase mediainfo snak pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Property>
 

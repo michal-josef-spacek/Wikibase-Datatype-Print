@@ -19,7 +19,7 @@ SEE ALSO
         TODO
 
     Wikibase::Datatype::Print::MediainfoSnak
-        TODO
+        Wikibase mediainfo snak pretty print helpers.
 
     Wikibase::Datatype::Print::Property
         TODO
