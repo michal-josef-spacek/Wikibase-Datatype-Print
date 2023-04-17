@@ -45,7 +45,7 @@ sub print {
 
 	# TODO Precision
 	# 0 - billion years, 1 - hundred million years, ..., 6 - millenia, 7 - century, 8 - decade,
-	# 9 - year, 10 - month, 11 - day, 12 - hour, 13 - minute, 14 - second
+	# 9 - year, 10 - month, 11 - day
 	# TODO other?
 
 	# TODO %d 01 -> 1
