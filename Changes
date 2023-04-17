@@ -3,6 +3,7 @@
  - Add doc for Wikibase::Datatype::Print::Snak.
  - Add doc for Wikibase::Datatype::Print::Statement.
  - Add references to MediainfoStatement.
+ - Fix dependencies.
  - Fix printing of multiple references. Each reference is in '{' and '}'
    block.
  - Fix test dependencies.

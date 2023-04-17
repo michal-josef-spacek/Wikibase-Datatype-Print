@@ -18,10 +18,10 @@ name 'Wikibase-Datatype-Print';
 perl_version 5.006002;
 readme_from 'Print.pm';
 recursive_author_tests('xt');
-requires 'Class::Utils' => 0.03;
 requires 'DateTime::Format::ISO8601' => 0;
 requires 'Error::Pure' => 0.15;
-requires 'Unicode::UTF8' => 0;
+requires 'Exporter' => 0;
+requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Wikibase-Datatype-Print';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Wikibase-Datatype-Print';

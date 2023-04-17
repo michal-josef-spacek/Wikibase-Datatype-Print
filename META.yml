@@ -53,10 +53,10 @@ no_index:
     - t
     - xt
 requires:
-  Class::Utils: 0.03
   DateTime::Format::ISO8601: 0
   Error::Pure: 0.15
-  Unicode::UTF8: 0
+  Exporter: 0
+  Readonly: 0
   perl: 5.6.2
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Wikibase-Datatype-Print/issues
