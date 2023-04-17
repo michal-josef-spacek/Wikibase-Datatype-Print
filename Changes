@@ -2,6 +2,7 @@
  - Add doc for Wikibase::Datatype::Print::MediainfoSnak.
  - Add doc for Wikibase::Datatype::Print::Snak.
  - Add doc for Wikibase::Datatype::Print::Statement.
+ - Add references to MediainfoStatement.
  - Fix printing of multiple references. Each reference is in '{' and '}'
    block.
 
