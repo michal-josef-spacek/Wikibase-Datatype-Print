@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 use Wikibase::Cache;
 use Wikibase::Cache::Backend::Basic;
@@ -81,4 +81,15 @@ $obj = Wikibase::Datatype::Value::Time->new(
 );
 $ret = Wikibase::Datatype::Print::Value::Time::print($obj, {});
 is($ret, '1846-1855 (Q1985727)', 'Get printed value. Only QID.');
+};
+
+# Test.
+SKIP: {
+skip "BCE implementation", 1;
+$obj = Wikibase::Datatype::Value::Time->new(
+	'precision' => 11,
+	'value' => '-0001-01-01T00:00:00Z',
+);
+$ret = Wikibase::Datatype::Print::Value::Time::print($obj, {});
+is($ret, '01 January 1 BCE (Q1985727)', 'Get printed value. Only QID.');
 };

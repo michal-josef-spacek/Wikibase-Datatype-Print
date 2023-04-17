@@ -16,7 +16,8 @@ jeden.
 30. Fix parsing of datetime in Value::Time
 It's different than ISO 8601. See https://phabricator.wikimedia.org/T99674
 31. Implement Value::Time range (before, after). There is test for it.
-32.
+32. Implement Value::Time BCE.
+33.
 
 Applied
 =======
