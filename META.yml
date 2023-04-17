@@ -20,7 +20,6 @@ build_requires:
   Unicode::UTF8: 0
   Wikibase::Cache: 0
   Wikibase::Cache::Backend::Basic: 0.03
-  Wikibase::Datatype: 0.25
   Wikibase::Datatype::Form: 0
   Wikibase::Datatype::Item: 0
   Wikibase::Datatype::Lexeme: 0

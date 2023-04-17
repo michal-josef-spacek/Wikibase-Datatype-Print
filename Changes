@@ -5,6 +5,7 @@
  - Add references to MediainfoStatement.
  - Fix printing of multiple references. Each reference is in '{' and '}'
    block.
+ - Remove non-sense test dependency to Wikibase::Datatype.
 
 0.06 2023-04-15T18:46:48+02:00
  - Add doc for Wikibase::Datatype::Print::Sitelink.
