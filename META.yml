@@ -23,6 +23,7 @@ build_requires:
   Wikibase::Datatype::Form: 0
   Wikibase::Datatype::Item: 0
   Wikibase::Datatype::Lexeme: 0
+  Wikibase::Datatype::MediainfoSnak: 0
   Wikibase::Datatype::Reference: 0
   Wikibase::Datatype::Sense: 0
   Wikibase::Datatype::Sitelink: 0
