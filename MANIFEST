@@ -1,5 +1,7 @@
 Changes
 examples/create_and_print_sitelink.pl
+examples/create_and_print_snak.pl
+examples/create_and_print_snak_translated.pl
 examples/create_and_print_value.pl
 examples/create_and_print_value_globecoordinate.pl
 examples/create_and_print_value_item.pl

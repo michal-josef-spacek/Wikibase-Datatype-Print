@@ -63,7 +63,7 @@ Wikibase sitelink pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Snak>
 
-TODO
+Wikibase snak pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Statement>
 
