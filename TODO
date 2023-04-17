@@ -13,7 +13,9 @@ jeden.
 26. Add examples to Wikibase::Datatype::Print::Utils.
 28. Common indentation level.
 29. Indentation in snak properties to same level as other. ?
-30.
+30. Fix parsing of datetime in Value::Time
+It's different than ISO 8601. See https://phabricator.wikimedia.org/T99674
+31.
 
 Applied
 =======

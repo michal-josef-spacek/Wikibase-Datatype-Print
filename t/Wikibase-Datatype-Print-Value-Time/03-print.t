@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 use Wikibase::Cache;
 use Wikibase::Cache::Backend::Basic;
@@ -57,3 +57,14 @@ eval {
 is($EVAL_ERROR, "Option 'cb' must be a instance of Wikibase::Cache.\n",
 	"Option 'cb' must be a instance of Wikibase::Cache.");
 clean();
+
+# Test.
+SKIP: {
+skip "Format YYYY-00-00 isn't supported.", 1;
+$obj = Wikibase::Datatype::Value::Time->new(
+	'precision' => 9, # year
+	'value' => '+1940-00-00T00:00:00Z',
+);
+$ret = Wikibase::Datatype::Print::Value::Time::print($obj, {});
+is($ret, '01 September 2020 (Q1985727)', 'Get printed value. Only QID.');
+};
