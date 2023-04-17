@@ -7,6 +7,7 @@
    block.
  - Fix test dependencies.
  - Remove non-sense test dependency to Wikibase::Datatype.
+ - Remove obsolete dependencies in Wikibase::Datatype::Print::Sitelink.
 
 0.06 2023-04-15T18:46:48+02:00
  - Add doc for Wikibase::Datatype::Print::Sitelink.

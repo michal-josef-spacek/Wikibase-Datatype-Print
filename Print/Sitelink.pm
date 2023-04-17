@@ -7,8 +7,6 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Value::Item;
-use Wikibase::Datatype::Sitelink;
-use Wikibase::Datatype::Value::Item;
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -103,9 +101,7 @@ Returns string.
 L<Error::Pure>,
 L<Exporter>,
 L<Readonly>,
-L<Wikibase::Datatype::Print::Value::Item>,
-L<Wikibase::Datatype::Sitelink>,
-L<Wikibase::Datatype::Value::Item>.
+L<Wikibase::Datatype::Print::Value::Item>.
 
 =head1 SEE ALSO
 
