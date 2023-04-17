@@ -11,9 +11,6 @@ jeden.
 23. Add doc.
 25. Fix TODOs in Wikibase::Datatype::Print::Value::Time
 26. Add examples to Wikibase::Datatype::Print::Utils.
-27. Fix printing of references. When i have two references, they are on same
-indentation level actually.
-See example Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male
 28.
 
 Applied
@@ -69,3 +66,8 @@ OK [20220709] skim
 
 24. Remove List::MoreUtils
 OK [20230406] skim
+
+27. Fix printing of references. When i have two references, they are on same
+indentation level actually.
+See example Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male
+OK [20230417] skim

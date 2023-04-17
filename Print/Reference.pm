@@ -19,10 +19,11 @@ sub print {
 		err "Object isn't 'Wikibase::Datatype::Reference'.";
 	}
 
-	my @ret;
+	my @ret = '{';
 	foreach my $snak (@{$obj->snaks}) {
-		push @ret, Wikibase::Datatype::Print::Snak::print($snak, $opts_hr);
+		push @ret, map { '  '.$_ } Wikibase::Datatype::Print::Snak::print($snak, $opts_hr);
 	}
+	push @ret, '}';
 
 	return wantarray ? @ret : (join "\n", @ret);
 }

@@ -74,6 +74,8 @@ print Wikibase::Datatype::Print::Statement::print($obj)."\n";
 # P31: Q5 (normal)
 #  P642: Q474741
 # References:
-#   P248: Q53919
-#   P214: 113230702
-#   P813: 07 December 2013 (Q1985727)
+#   {
+#     P248: Q53919
+#     P214: 113230702
+#     P813: 07 December 2013 (Q1985727)
+#   }

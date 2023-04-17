@@ -147,9 +147,11 @@ Returns string.
  # P31: Q5 (normal)
  #  P642: Q474741
  # References:
- #   P248: Q53919
- #   P214: 113230702
- #   P813: 07 December 2013 (Q1985727)
+ #   {
+ #     P248: Q53919
+ #     P214: 113230702
+ #     P813: 07 December 2013 (Q1985727)
+ #   }
 
 =head1 EXAMPLE2
 
@@ -238,9 +240,11 @@ Returns string.
  # P31 (instance of): Q5 (normal)
  #  P642: Q474741
  # References:
- #   P248 (stated in): Q53919
- #   P214 (VIAF ID): 113230702
- #   P813 (retrieved): 07 December 2013 (Q1985727)
+ #   {
+ #     P248 (stated in): Q53919
+ #     P214 (VIAF ID): 113230702
+ #     P813 (retrieved): 07 December 2013 (Q1985727)
+ #   }
 
 =head1 DEPENDENCIES
 
