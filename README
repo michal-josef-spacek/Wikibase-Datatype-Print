@@ -37,7 +37,7 @@ SEE ALSO
         Wikibase snak pretty print helpers.
 
     Wikibase::Datatype::Print::Statement
-        TODO
+        Wikibase statement pretty print helpers.
 
     Wikibase::Datatype::Print::Utils
         Wikibase pretty print helper utils.

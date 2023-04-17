@@ -67,7 +67,7 @@ Wikibase snak pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Statement>
 
-TODO
+Wikibase statement pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Utils>
 
