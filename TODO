@@ -17,7 +17,8 @@ jeden.
 It's different than ISO 8601. See https://phabricator.wikimedia.org/T99674
 31. Implement Value::Time range (before, after). There is test for it.
 32. Implement Value::Time BCE.
-33. Add some property to W:D:P:MediainfoStatement EXAMPLE2. Update example.
+33. Add some property to Wikibase::Cache for W:D:P:MediainfoStatement EXAMPLE2.
+    Update example.
 34.
 
 Applied
