@@ -3,7 +3,7 @@ use warnings;
 
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 7;
+use Test::More 'tests' => 8;
 use Test::NoWarnings;
 use Wikibase::Cache;
 use Wikibase::Cache::Backend::Basic;
@@ -66,5 +66,19 @@ $obj = Wikibase::Datatype::Value::Time->new(
 	'value' => '+1940-00-00T00:00:00Z',
 );
 $ret = Wikibase::Datatype::Print::Value::Time::print($obj, {});
-is($ret, '01 September 2020 (Q1985727)', 'Get printed value. Only QID.');
+is($ret, '1940 (Q1985727)', 'Get printed value. Only QID.');
+};
+
+# Test.
+SKIP: {
+skip "Format with before and after is unsupported.", 1;
+# https://www.mediawiki.org/w/index.php?title=Wikibase/DataModel#Examples
+$obj = Wikibase::Datatype::Value::Time->new(
+	'after' => 5,
+	'before' => 4,
+	'precision' => 9, # year
+	'value' => '+00000001850-00-00T00:00:00Z',
+);
+$ret = Wikibase::Datatype::Print::Value::Time::print($obj, {});
+is($ret, '1846-1855 (Q1985727)', 'Get printed value. Only QID.');
 };
