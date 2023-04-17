@@ -11,7 +11,10 @@ jeden.
 23. Add doc.
 25. Fix TODOs in Wikibase::Datatype::Print::Value::Time
 26. Add examples to Wikibase::Datatype::Print::Utils.
-27.
+27. Fix printing of references. When i have two references, they are on same
+indentation level actually.
+See example Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male
+28.
 
 Applied
 =======
