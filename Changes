@@ -2,6 +2,7 @@
  - Add doc for Wikibase::Datatype::Print::MediainfoStatement.
  - Add error check to Wikibase::Datatype::Print::Value::Time.
  - Add test for Utils::print_common().
+ - Add tests for Wikibase::Datatype::Print::Value.
  - Fix minimal dependency for
    Test::Shared::Fixture::Wikibase::Datatype::MediainfoStatement::Commons::Depicts::Human.
 
