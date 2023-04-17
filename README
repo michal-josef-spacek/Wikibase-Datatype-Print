@@ -21,6 +21,9 @@ SEE ALSO
     Wikibase::Datatype::Print::MediainfoSnak
         Wikibase mediainfo snak pretty print helpers.
 
+    Wikibase::Datatype::Print::MediainfoStatement
+        Wikibase mediainfo statement pretty print helpers.
+
     Wikibase::Datatype::Print::Property
         TODO
 

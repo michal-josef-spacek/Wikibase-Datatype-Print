@@ -45,6 +45,10 @@ TODO
 
 Wikibase mediainfo snak pretty print helpers.
 
+=item L<Wikibase::Datatype::Print::MediainfoStatement>
+
+Wikibase mediainfo statement pretty print helpers.
+
 =item L<Wikibase::Datatype::Print::Property>
 
 TODO
