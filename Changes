@@ -1,4 +1,5 @@
 0.09
+ - Add doc for Wikibase::Datatype::Print::Form.
  - Add doc for Wikibase::Datatype::Print::Reference.
  - Add doc for Wikibase::Datatype::Print::Sense.
 

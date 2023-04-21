@@ -27,7 +27,7 @@ This distributions is set of print helpers for Wikibase::Datatype objects.
 
 =item L<Wikibase::Datatype::Print::Form>
 
-TODO
+Wikibase form pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Item>
 
