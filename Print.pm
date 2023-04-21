@@ -59,7 +59,7 @@ Wikibase reference pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Sense>
 
-TODO
+Wikibase sense pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Sitelink>
 

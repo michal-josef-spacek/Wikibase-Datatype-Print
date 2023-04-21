@@ -1,5 +1,6 @@
 0.09
  - Add doc for Wikibase::Datatype::Print::Reference.
+ - Add doc for Wikibase::Datatype::Print::Sense.
 
 0.08 2023-04-18T01:48:41+02:00
  - Add doc for Wikibase::Datatype::Print::MediainfoStatement.
