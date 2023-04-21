@@ -35,5 +35,5 @@ print Wikibase::Datatype::Print::Reference::print($obj)."\n";
 # Output:
 # {
 #   P854: https://skim.cz
-#   P813: 07 December 2013 (Q1985727)
+#   P813: 7 December 2013 (Q1985727)
 # }

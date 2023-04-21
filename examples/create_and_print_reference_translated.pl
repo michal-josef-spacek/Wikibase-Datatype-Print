@@ -44,5 +44,5 @@ print Wikibase::Datatype::Print::Reference::print($obj, {
 # Output:
 # {
 #   P854 (reference URL): https://skim.cz
-#   P813 (retrieved): 07 December 2013 (Q1985727)
+#   P813 (retrieved): 7 December 2013 (Q1985727)
 # }

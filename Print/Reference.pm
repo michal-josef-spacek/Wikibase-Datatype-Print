@@ -101,7 +101,7 @@ Returns string.
  # Output:
  # {
  #   P854: https://skim.cz
- #   P813: 07 December 2013 (Q1985727)
+ #   P813: 7 December 2013 (Q1985727)
  # }
 
 =head1 EXAMPLE2
@@ -152,7 +152,7 @@ Returns string.
  # Output:
  # {
  #   P854 (reference URL): https://skim.cz
- #   P813 (retrieved): 07 December 2013 (Q1985727)
+ #   P813 (retrieved): 7 December 2013 (Q1985727)
  # }
 
 =head1 DEPENDENCIES

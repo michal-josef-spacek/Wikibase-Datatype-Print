@@ -13,13 +13,11 @@ jeden.
 26. Add examples to Wikibase::Datatype::Print::Utils.
 28. Common indentation level.
 29. Indentation in snak properties to same level as other. ?
-30. Fix parsing of datetime in Value::Time
-It's different than ISO 8601. See https://phabricator.wikimedia.org/T99674
 31. Implement Value::Time range (before, after). There is test for it.
-32. Implement Value::Time BCE.
 33. Add some property to Wikibase::Cache for W:D:P:MediainfoStatement EXAMPLE2.
     Update example.
-34.
+34. Implement other time precisions.
+35.
 
 Applied
 =======
@@ -79,3 +77,10 @@ OK [20230406] skim
 indentation level actually.
 See example Test::Shared::Fixture::Wikibase::Datatype::Statement::Wikidata::SexOrGender::Male
 OK [20230417] skim
+
+30. Fix parsing of datetime in Value::Time
+It's different than ISO 8601. See https://phabricator.wikimedia.org/T99674
+OK [20230421] skim
+
+32. Implement Value::Time BCE.
+OK [20230421] skim
