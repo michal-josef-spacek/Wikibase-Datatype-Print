@@ -28,7 +28,7 @@ SEE ALSO
         TODO
 
     Wikibase::Datatype::Print::Reference
-        TODO
+        Wikibase reference pretty print helpers.
 
     Wikibase::Datatype::Print::Sense
         TODO

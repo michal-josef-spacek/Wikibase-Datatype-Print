@@ -55,7 +55,7 @@ TODO
 
 =item L<Wikibase::Datatype::Print::Reference>
 
-TODO
+Wikibase reference pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Sense>
 
