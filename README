@@ -13,7 +13,7 @@ SEE ALSO
         TODO
 
     Wikibase::Datatype::Print::Lexeme
-        TODO
+        Wikibase lexeme pretty print helpers.
 
     Wikibase::Datatype::Print::Mediainfo
         TODO

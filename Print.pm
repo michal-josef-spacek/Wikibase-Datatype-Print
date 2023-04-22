@@ -35,7 +35,7 @@ TODO
 
 =item L<Wikibase::Datatype::Print::Lexeme>
 
-TODO
+Wikibase lexeme pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Mediainfo>
 
