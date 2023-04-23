@@ -130,6 +130,7 @@ t/Wikibase-Datatype-Print-Value-Quantity/02-version.t
 t/Wikibase-Datatype-Print-Value-Quantity/03-print.t
 t/Wikibase-Datatype-Print-Value-Sense/01-use.t
 t/Wikibase-Datatype-Print-Value-Sense/02-version.t
+t/Wikibase-Datatype-Print-Value-Sense/03-print.t
 t/Wikibase-Datatype-Print-Value-String/01-use.t
 t/Wikibase-Datatype-Print-Value-String/02-version.t
 t/Wikibase-Datatype-Print-Value-String/03-print.t

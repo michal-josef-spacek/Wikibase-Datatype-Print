@@ -1,6 +1,7 @@
 0.11
  - Add comments.
  - Add support for decade precision in Time.
+ - Fix MANIFEST file for sense value test.
  - Improve datetime precision print.
 
 0.10 2023-04-23T10:57:02+02:00
