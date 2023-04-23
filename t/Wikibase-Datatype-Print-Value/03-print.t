@@ -56,7 +56,7 @@ $obj = Wikibase::Datatype::Value::Property->new(
 	'value' => 'P123',
 );
 $ret = Wikibase::Datatype::Print::Value::print($obj);
-is($ret, 'P123', 'Get printed value pro property.');
+is($ret, 'P123', 'Get printed value for property.');
 
 # Test.
 $obj = Wikibase::Datatype::Value::Quantity->new(
