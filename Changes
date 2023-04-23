@@ -1,6 +1,7 @@
 0.11
  - Add doc example in Utils.
  - Add comments.
+ - Add support for before/after in year precision in Time.
  - Add support for decade precision in Time.
  - Fix MANIFEST file for sense value test.
  - Fix support of bigger year than with 4 characters.

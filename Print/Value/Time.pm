@@ -57,6 +57,11 @@ sub print {
 	# Year.
 	} elsif ($obj->precision == 9) {
 		$printed_date = $dt->strftime("%Y");
+		if ($obj->before || $obj->after) {
+			my $before = $obj->before ? $dt->year - $obj->before : $dt->year;
+			my $after = $obj->after ? $dt->year + $obj->after : $dt->year;
+			$printed_date .= " ($before-$after)";
+		}
 
 	# Decade.
 	} elsif ($obj->precision == 8) {

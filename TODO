@@ -14,6 +14,7 @@ jeden.
 28. Common indentation level.
 29. Indentation in snak properties to same level as other. ?
 31. Implement Value::Time range (before, after). There is test for it.
+Done for year
 33. Add some property to Wikibase::Cache for W:D:P:MediainfoStatement EXAMPLE2.
     Update example.
 34. Implement other time precisions.
