@@ -1,5 +1,6 @@
 0.10
  - Add doc for Wikibase::Datatype::Print::Lexeme.
+ - Add support of sense to Value.
  - Add Wikibase::Datatype::Print::Value::Sense.
  - Fix test message.
 
