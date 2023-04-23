@@ -58,9 +58,13 @@ sub print {
 	} elsif ($obj->precision == 9) {
 		$printed_date = $dt->strftime("%Y");
 
+	# Decade.
+	} elsif ($obj->precision == 8) {
+		$printed_date = (int($dt->strftime('%Y') / 10) * 10).'s';
+
 	# TODO Better precision print?
-	# 0 - billion years, 1 - hundred million years, ..., 6 - millenia, 7 - century, 8 - decade,
-	} elsif ($obj->precision <= 8 && $obj->precision >= 0) {
+	# 0 - billion years, 1 - hundred million years, ..., 6 - millenia, 7 - century
+	} elsif ($obj->precision <= 7 && $obj->precision >= 0) {
 		$printed_date = $dt->strftime("%Y");
 	} else {
 		err "Unsupported precision '".$obj->precision."'.";
