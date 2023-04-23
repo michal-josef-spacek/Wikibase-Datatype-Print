@@ -1,4 +1,4 @@
-0.11
+0.11 2023-04-23T18:41:18+02:00
  - Add doc example in Utils.
  - Add comments.
  - Add support for before/after in year precision in Time.
