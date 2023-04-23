@@ -34,6 +34,7 @@ build_requires:
   Wikibase::Datatype::Value::Monolingual: 0
   Wikibase::Datatype::Value::Property: 0
   Wikibase::Datatype::Value::Quantity: 0
+  Wikibase::Datatype::Value::Sense: 0.28
   Wikibase::Datatype::Value::String: 0
   Wikibase::Datatype::Value::Time: 0
 configure_requires:

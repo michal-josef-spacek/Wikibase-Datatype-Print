@@ -1,4 +1,5 @@
 0.10
+ - Add Wikibase::Datatype::Print::Value::Sense.
  - Add doc for Wikibase::Datatype::Print::Lexeme.
 
 0.09 2023-04-21T21:13:56+02:00

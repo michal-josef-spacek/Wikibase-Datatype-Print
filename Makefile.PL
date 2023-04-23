@@ -55,6 +55,7 @@ test_requires 'Wikibase::Datatype::Value::Item' => 0;
 test_requires 'Wikibase::Datatype::Value::Monolingual' => 0;
 test_requires 'Wikibase::Datatype::Value::Property' => 0;
 test_requires 'Wikibase::Datatype::Value::Quantity' => 0;
+test_requires 'Wikibase::Datatype::Value::Sense' => 0.28;
 test_requires 'Wikibase::Datatype::Value::String' => 0;
 test_requires 'Wikibase::Datatype::Value::Time' => 0;
 tests_recursive;
