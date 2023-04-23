@@ -1,4 +1,4 @@
-0.10
+0.10 2023-04-23T10:57:02+02:00
  - Add doc for Wikibase::Datatype::Print::Lexeme.
  - Add support of sense to Value.
  - Add Wikibase::Datatype::Print::Value::Sense.
