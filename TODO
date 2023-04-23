@@ -17,7 +17,8 @@ jeden.
 33. Add some property to Wikibase::Cache for W:D:P:MediainfoStatement EXAMPLE2.
     Update example.
 34. Implement other time precisions.
-35.
+35. Improve priniting of multiple values in statement.
+36.
 
 Applied
 =======
