@@ -44,11 +44,17 @@ sub print {
 	my $dt = _parse_date($obj->value);
 
 	my $printed_date;
+
+	# Day.
 	if ($obj->precision == 11) {
 		$printed_date = $dt->strftime("%e %B %Y");
 		$printed_date =~ s/^\s+//ms;
+
+	# Month.
 	} elsif ($obj->precision == 10) {
 		$printed_date = $dt->strftime("%B %Y");
+
+	# Year.
 	} elsif ($obj->precision == 9) {
 		$printed_date = $dt->strftime("%Y");
 
