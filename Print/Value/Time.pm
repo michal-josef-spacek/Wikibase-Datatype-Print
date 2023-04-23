@@ -76,7 +76,7 @@ sub print {
 sub _parse_date {
 	my $date = shift;
 
-	my ($year, $month, $day) = ($date =~ m/^([\+\-]\d{4})\-(\d{2})\-(\d{2})T\d{2}:\d{2}:\d{2}Z$/ms);
+	my ($year, $month, $day) = ($date =~ m/^([\+\-]\d+)\-(\d{2})\-(\d{2})T\d{2}:\d{2}:\d{2}Z$/ms);
 	my $dt = DateTime->new(
 		'year' => int($year),
 		$month != 0 ? ('month' => $month) : (),

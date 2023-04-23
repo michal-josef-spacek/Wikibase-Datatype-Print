@@ -3,6 +3,7 @@
  - Add comments.
  - Add support for decade precision in Time.
  - Fix MANIFEST file for sense value test.
+ - Fix support of bigger year than with 4 characters.
  - Improve datetime precision print.
 
 0.10 2023-04-23T10:57:02+02:00
