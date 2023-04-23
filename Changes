@@ -1,4 +1,5 @@
 0.11
+ - Add doc example in Utils.
  - Add comments.
  - Add support for decade precision in Time.
  - Fix MANIFEST file for sense value test.
