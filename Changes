@@ -1,5 +1,6 @@
 0.12
  - Add doc for Wikibase::Datatype::Print::Item.
+ - Fix dependency to Wikidata::Datatype::Value::Sense.
 
 0.11 2023-04-23T18:41:18+02:00
  - Add doc example in Utils.
