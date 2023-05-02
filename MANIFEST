@@ -6,6 +6,7 @@ examples/create_and_print_mediainfo_snak.pl
 examples/create_and_print_mediainfo_snak_translated.pl
 examples/create_and_print_mediainfo_statement.pl
 examples/create_and_print_mediainfo_statement_translated.pl
+examples/create_and_print_property.pl
 examples/create_and_print_reference.pl
 examples/create_and_print_reference_translated.pl
 examples/create_and_print_sense.pl
