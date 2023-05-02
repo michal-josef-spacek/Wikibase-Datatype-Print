@@ -1,4 +1,5 @@
 0.13
+ - Add doc for Wikibase::Datatype::Print::Mediainfo.
 
 0.12 2023-04-24T18:40:57+02:00
  - Add doc for Wikibase::Datatype::Print::Item.
