@@ -31,7 +31,7 @@ Wikibase form pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Item>
 
-TODO
+Wikibase item pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Lexeme>
 
@@ -39,7 +39,7 @@ Wikibase lexeme pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Mediainfo>
 
-TODO
+Wikibase mediainfo pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::MediainfoSnak>
 
@@ -51,7 +51,7 @@ Wikibase mediainfo statement pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Property>
 
-TODO
+Wikibase property pretty print helpers.
 
 =item L<Wikibase::Datatype::Print::Reference>
 
