@@ -40,17 +40,20 @@ Wikibase::Datatype::Print::Value::Sense - Wikibase sense value pretty print help
  use Wikibase::Datatype::Print::Value::Sense qw(print);
 
  my $pretty_print_string = print($obj, $opts_hr);
+ my @pretty_print_lines = print($obj, $opts_hr);
 
 =head1 SUBROUTINES
 
 =head2 C<print>
 
  my $pretty_print_string = print($obj, $opts_hr);
+ my @pretty_print_lines = print($obj, $opts_hr);
 
 Construct pretty print output for L<Wikibase::Datatype::Value::Sense>
 object.
 
-Returns string.
+Returns string in scalar context.
+Returns list of lines in array context.
 
 =head1 ERRORS
 
