@@ -1,6 +1,7 @@
 0.13
  - Add doc for Wikibase::Datatype::Print::Mediainfo.
  - Add doc for Wikibase::Datatype::Print::Property.
+ - Add example for print_forms() to Util.
  - Finish Print doc.
  - Fix print() function in doc. More contexts.
 
