@@ -1,4 +1,5 @@
 0.14
+ - Add Wikibase::Datatype::Print::Lexeme.
  - Update Module::Install to 1.21 version.
 
 0.13 2023-05-02T09:29:21+02:00
