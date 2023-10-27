@@ -31,6 +31,7 @@ build_requires:
   Wikibase::Datatype::Statement: 0
   Wikibase::Datatype::Value::Globecoordinate: 0
   Wikibase::Datatype::Value::Item: 0
+  Wikibase::Datatype::Value::Lexeme: 0
   Wikibase::Datatype::Value::Monolingual: 0
   Wikibase::Datatype::Value::Property: 0
   Wikibase::Datatype::Value::Quantity: 0
