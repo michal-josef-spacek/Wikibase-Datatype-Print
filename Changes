@@ -3,6 +3,7 @@
  - Simplify code for Wikibase::Datatype::Print::Value::Item.
  - Simplify code for Wikibase::Datatype::Print::Value::Lexeme.
  - Simplify code for Wikibase::Datatype::Print::Value::Property.
+ - Simplify code for Wikibase::Datatype::Print::Value::Quantity.
 
 0.14 2023-10-27T23:09:31+02:00
  - Add Wikibase::Datatype::Print::Lexeme.
