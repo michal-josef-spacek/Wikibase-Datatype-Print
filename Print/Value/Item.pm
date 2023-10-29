@@ -24,8 +24,9 @@ sub print {
 
 	my $item;
 	if (exists $opts_hr->{'cb'}) {
-		$item = $opts_hr->{'cb'}->get('label', $obj->value) || $obj->value;
-	} else {
+		$item = $opts_hr->{'cb'}->get('label', $obj->value);
+	}
+	if (! defined $item) {
 		$item = $obj->value;
 	}
 
