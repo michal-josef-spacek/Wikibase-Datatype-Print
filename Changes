@@ -1,5 +1,6 @@
 0.15
  - Fix test dependencies.
+ - Simplify code for Wikibase::Datatype::Print::Value::Lexeme.
  - Simplify code for Wikibase::Datatype::Print::Value::Property.
 
 0.14 2023-10-27T23:09:31+02:00
