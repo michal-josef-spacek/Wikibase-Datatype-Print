@@ -24,8 +24,9 @@ sub print {
 
 	my $property;
 	if (exists $opts_hr->{'cb'}) {
-		$property = $opts_hr->{'cb'}->get('label', $obj->value) || $obj->value;
-	} else {
+		$property = $opts_hr->{'cb'}->get('label', $obj->value);
+	}
+	if (! defined $property) {
 		$property = $obj->value;
 	}
 
