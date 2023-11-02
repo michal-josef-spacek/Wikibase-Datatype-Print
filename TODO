@@ -20,7 +20,6 @@ Done for year
 35. Improve priniting of multiple values in statement.
 36. Add BCE to Time.
 37. Add test for lexeme with translation
-38. Add Item/Lexeme/Mediainfo to Print.pm
 39.
 
 Applied
@@ -91,3 +90,6 @@ OK [20230421] skim
 
 23. Add doc.
 OK [20230502] skim
+
+38. Add Item/Lexeme/Mediainfo to Print.pm
+OK [20231102] skim
