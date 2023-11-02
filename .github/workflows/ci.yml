@@ -58,4 +58,4 @@ jobs:
       env:
         AUTHOR_TESTING: 1
         RELEASE_TESTING: 1
-      run: prove -lv t
+      run: prove -r -lv t
