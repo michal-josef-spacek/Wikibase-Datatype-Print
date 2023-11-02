@@ -54,6 +54,9 @@ SEE ALSO
     Wikibase::Datatype::Print::Value::Item
         Wikibase item value pretty print helpers.
 
+    Wikibase::Datatype::Print::Value::Lexeme
+        Wikibase lexeme value pretty print helpers.
+
     Wikibase::Datatype::Print::Value::Monolingual
         Wikibase monolingual value pretty print helpers.
 

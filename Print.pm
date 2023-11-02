@@ -89,6 +89,10 @@ Wikibase globe coordinate item pretty print helpers.
 
 Wikibase item value pretty print helpers.
 
+=item L<Wikibase::Datatype::Print::Value::Lexeme>
+
+Wikibase lexeme value pretty print helpers.
+
 =item L<Wikibase::Datatype::Print::Value::Monolingual>
 
 Wikibase monolingual value pretty print helpers.
