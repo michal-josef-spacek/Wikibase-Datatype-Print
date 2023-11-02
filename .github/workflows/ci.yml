@@ -58,9 +58,4 @@ jobs:
       env:
         AUTHOR_TESTING: 1
         RELEASE_TESTING: 1
-      run: |
-        perl Makefile.PL
-        make
-        make test
-
-
+      run: prove -lv t
