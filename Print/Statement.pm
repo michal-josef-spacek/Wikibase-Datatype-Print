@@ -29,8 +29,10 @@ sub print {
 	}
 
 	# References.
-	push @ret, print_references($obj, $opts_hr,
-		\&Wikibase::Datatype::Print::Reference::print);
+	if (! exists $opts_hr->{'no_print_references'} || ! $opts_hr->{'no_print_references'}) {
+		push @ret, print_references($obj, $opts_hr,
+			\&Wikibase::Datatype::Print::Reference::print);
+	}
 
 	return wantarray ? @ret : (join "\n", @ret);
 }
