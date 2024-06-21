@@ -5,13 +5,28 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
+use List::Util 1.33 qw(all);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(print_aliases print_common print_descriptions
+Readonly::Array our @EXPORT_OK => qw(defaults print_aliases print_common print_descriptions
 	print_forms print_glosses print_labels print_references print_senses
 	print_sitelinks print_statements);
 
 our $VERSION = 0.17;
+
+sub defaults {
+	my ($obj, $opts_hr) = @_;
+
+	if (! defined $opts_hr) {
+		$opts_hr = {};
+	}
+
+	if (! exists $opts_hr->{'lang'}) {
+		$opts_hr->{'lang'} = 'en';
+	}
+
+	return $opts_hr;
+}
 
 sub print_aliases {
 	my ($obj, $opts_hr, $alias_cb) = @_;
@@ -136,10 +151,11 @@ Wikibase::Datatype::Print::Utils - Wikibase pretty print helper utils.
 
 =head1 SYNOPSIS
 
- use Wikibase::Datatype::Print::Utils qw(print_aliases print_common print_descriptions
+ use Wikibase::Datatype::Print::Utils qw(defaults print_aliases print_common print_descriptions
          print_forms print_glosses print_labels print_references print_senses
          print_sitelinks print_statements);
 
+ my $opts_hr = defaults($obj, $opts_hr);
  my @aliase_strings = print_aliases($obj, $opts_hr, $alias_cb);
  my @common_strings = print_common($obj, $opts_hr, $list_method, $print_cb, $title, $input_cb, $flag_one_line);
  my @desc_strings = print_descriptions($obj, $opts_hr, $desc_cb);
@@ -152,6 +168,29 @@ Wikibase::Datatype::Print::Utils - Wikibase pretty print helper utils.
  my @statement_strings = print_statements($obj, $opts_hr, $statement_cb);
 
 =head1 SUBROUTINES
+
+=head2 C<defaults>
+
+ my $opts_hr = defaults($obj, $opts_hr);
+
+Set default C<$opts_hr> options variable which is used in all main objects.
+Updates:
+
+=over
+
+=item main C<$opts_hr> variable if doesn't exist ({})
+
+=item language if doesn't exist (en)
+
+=item texts (English texts)
+
+=item check texts if are defined from user (error)
+
+=back
+
+Returns updated C<$opts_hr> variable.
+
+Returns reference to hash.
 
 =head2 C<print_aliases>
 

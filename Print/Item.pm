@@ -8,7 +8,7 @@ use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Sitelink;
 use Wikibase::Datatype::Print::Statement;
-use Wikibase::Datatype::Print::Utils qw(print_aliases print_descriptions
+use Wikibase::Datatype::Print::Utils qw(defaults print_aliases print_descriptions
 	print_labels print_sitelinks print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
@@ -19,13 +19,7 @@ our $VERSION = 0.17;
 sub print {
 	my ($obj, $opts_hr) = @_;
 
-	if (! defined $opts_hr) {
-		$opts_hr = {};
-	}
-
-	if (! exists $opts_hr->{'lang'}) {
-		$opts_hr->{'lang'} = 'en';
-	}
+	$opts_hr = defaults($obj, $opts_hr);
 
 	if (! $obj->isa('Wikibase::Datatype::Item')) {
 		err "Object isn't 'Wikibase::Datatype::Item'.";
@@ -91,6 +85,8 @@ Returns list of lines in array context.
 =head1 ERRORS
 
  print():
+         From Wikibase::Datatype::Print::Utils::defaults():
+                 Defined text keys are bad.
          Object isn't 'Wikibase::Datatype::Item'.
 
 =head1 EXAMPLE

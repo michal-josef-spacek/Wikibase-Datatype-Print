@@ -21,7 +21,8 @@ Done for year
 36. Add BCE to Time.
 37. Add test for lexeme with translation
 39. Add options to doc.
-40.
+40. Tests for Text::defaults().
+41.
 
 Applied
 =======

@@ -9,7 +9,7 @@ use Readonly;
 use Wikibase::Datatype::Print::Form;
 use Wikibase::Datatype::Print::Sense;
 use Wikibase::Datatype::Print::Statement;
-use Wikibase::Datatype::Print::Utils qw(print_forms print_senses print_statements);
+use Wikibase::Datatype::Print::Utils qw(defaults print_forms print_senses print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
 Readonly::Array our @EXPORT_OK => qw(print);
@@ -19,9 +19,7 @@ our $VERSION = 0.17;
 sub print {
 	my ($obj, $opts_hr) = @_;
 
-	if (! defined $opts_hr) {
-		$opts_hr = {};
-	}
+	$opts_hr = defaults($obj, $opts_hr);
 
 	if (! $obj->isa('Wikibase::Datatype::Lexeme')) {
 		err "Object isn't 'Wikibase::Datatype::Lexeme'.";
@@ -102,6 +100,8 @@ Returns list of lines in array context.
 =head1 ERRORS
 
  print():
+         From Wikibase::Datatype::Print::Utils::defaults():
+                 Defined text keys are bad.
          Object isn't 'Wikibase::Datatype::Lexeme'.
 
 =head1 EXAMPLE

@@ -7,7 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::MediainfoStatement;
-use Wikibase::Datatype::Print::Utils qw(print_descriptions print_labels
+use Wikibase::Datatype::Print::Utils qw(defaults print_descriptions print_labels
 	print_statements);
 use Wikibase::Datatype::Print::Value::Monolingual;
 
@@ -18,13 +18,7 @@ our $VERSION = 0.17;
 sub print {
 	my ($obj, $opts_hr) = @_;
 
-	if (! defined $opts_hr) {
-		$opts_hr = {};
-	}
-
-	if (! exists $opts_hr->{'lang'}) {
-		$opts_hr->{'lang'} = 'en';
-	}
+	$opts_hr = defaults($obj, $opts_hr);
 
 	if (! $obj->isa('Wikibase::Datatype::Mediainfo')) {
 		err "Object isn't 'Wikibase::Datatype::Mediainfo'.";
@@ -89,6 +83,8 @@ Returns list of lines in array context.
 =head1 ERRORS
 
  print():
+         From Wikibase::Datatype::Print::Utils::defaults():
+                 Defined text keys are bad.
          Object isn't 'Wikibase::Datatype::Mediainfo'.
 
 =head1 EXAMPLE1

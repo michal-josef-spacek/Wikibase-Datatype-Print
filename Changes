@@ -1,6 +1,7 @@
 0.17
  - Fix tests for Wikibase::Datatype::Print.
  - Remove defaults from Print, not needed.
+ - Rewrite all default settings to Utils::defaults().
  - Update copyright years.
 
 0.16 2023-11-02T19:59:25+01:00
