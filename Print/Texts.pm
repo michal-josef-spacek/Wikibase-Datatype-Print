@@ -5,9 +5,38 @@ use strict;
 use warnings;
 
 use Readonly;
+use Unicode::UTF8 qw(decode_utf8);
 
 Readonly::Array our @EXPORT_OK => qw(text_keys texts);
 Readonly::Hash our %TEXTS => (
+	'cs' => {
+		'aliases' => 'Aliasy',
+		'data_type' => decode_utf8('Datový typ'),
+		'date_of_modification' => decode_utf8('Datum změny'),
+		'description' => 'Popis',
+		'forms' => 'Tvary',
+		'glosses' => 'Glosy',
+		'grammatical_features' => decode_utf8('Gramatické vlastnosti'),
+		'id' => 'Id',
+		'label' => decode_utf8('Štítek'),
+		'language' => 'Jazyk',
+		'last_revision_id' => decode_utf8('Id poslední revize'),
+		'lemmas' => 'Lemmy',
+		'lexical_category' => decode_utf8('Mluvnická kategorie'),
+		'ns' => 'NS',
+		'page_id' => decode_utf8('Id stránky'),
+		'rank_deprecated' => decode_utf8('zavržené'),
+		'rank_normal' => decode_utf8('normální'),
+		'rank_preferred' => decode_utf8('preferované'),
+		'references' => 'Reference',
+		'representation' => 'Reprezentace',
+		'senses' => decode_utf8('Významy'),
+		'sitelinks' => 'Odkazy',
+		'statements' => decode_utf8('Výroky'),
+		'title' => 'Titul',
+		'value_no' => 'bez hodnoty',
+		'value_unknown' => decode_utf8('neznámá hodnota'),
+	},
 	'en' => {
 		'aliases' => 'Aliases',
 		'data_type' => 'Data type',

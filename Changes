@@ -1,4 +1,5 @@
 0.17
+ - Add Czech translation of texts.
  - Fix tests for Wikibase::Datatype::Print.
  - Remove defaults from Print, not needed.
  - Rewrite all default settings to Utils::defaults().
