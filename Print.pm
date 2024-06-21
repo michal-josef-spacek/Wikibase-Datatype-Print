@@ -11,9 +11,9 @@ use Wikibase::Datatype::Print::Lexeme;
 use Wikibase::Datatype::Print::Mediainfo;
 use Wikibase::Datatype::Print::Property;
 
-our $VERSION = 0.17;
-
 Readonly::Array our @EXPORT_OK => qw(print);
+
+our $VERSION = 0.17;
 
 sub print {
 	my ($obj, $opts_hr) = @_;
