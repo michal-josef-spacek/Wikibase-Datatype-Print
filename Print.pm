@@ -18,14 +18,6 @@ our $VERSION = 0.17;
 sub print {
 	my ($obj, $opts_hr) = @_;
 
-	if (! defined $opts_hr) {
-		$opts_hr = {};
-	}
-
-	if (! exists $opts_hr->{'lang'}) {
-		$opts_hr->{'lang'} = 'en';
-	}
-
 	my @ret;
 	if ($obj->isa('Wikibase::Datatype::Item')) {
 		@ret = Wikibase::Datatype::Print::Item::print($obj, $opts_hr);
