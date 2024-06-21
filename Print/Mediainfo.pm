@@ -25,12 +25,12 @@ sub print {
 	}
 
 	my @ret = (
-		defined $obj->id ? 'Id: '.$obj->id : (),
-		defined $obj->title ? 'Title: '.$obj->title : (),
-		defined $obj->ns ? 'NS: '.$obj->ns : (),
-		defined $obj->lastrevid ? 'Last revision id: '.$obj->lastrevid : (),
-		defined $obj->modified ? 'Date of modification: '.$obj->modified : (),
-		defined $obj->page_id ? 'Page ID: '.$obj->page_id : (),
+		defined $obj->id ? $opts_hr->{'texts'}->{'id'}.': '.$obj->id : (),
+		defined $obj->title ? $opts_hr->{'texts'}->{'title'}.': '.$obj->title : (),
+		defined $obj->ns ? $opts_hr->{'texts'}->{'ns'}.': '.$obj->ns : (),
+		defined $obj->lastrevid ? $opts_hr->{'texts'}->{'last_revision_id'}.': '.$obj->lastrevid : (),
+		defined $obj->modified ? $opts_hr->{'texts'}->{'date_of_modification'}.': '.$obj->modified : (),
+		defined $obj->page_id ? $opts_hr->{'texts'}->{'page_id'}.': '.$obj->page_id : (),
 	);
 
 	# Label.

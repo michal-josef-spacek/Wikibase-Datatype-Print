@@ -1,6 +1,5 @@
 TODO
 ====
-7. Preklady popisnych textu (cs, en)?
 9. Moznost prekladu (Q42 -> Douglas Adams (cs)) i P31
 10. U lexemu v sense zobrazovat glosses jenom ty jak potrebuji. Bud jenom muj
 jazyk, v pripade neexistence napsat - (cs). Nebo nabizet vice, ale zobrazit
@@ -22,7 +21,8 @@ Done for year
 37. Add test for lexeme with translation
 39. Add options to doc.
 40. Tests for Text::defaults().
-41.
+41. Doc for Texts.
+42.
 
 Applied
 =======
@@ -95,3 +95,6 @@ OK [20230502] skim
 
 38. Add Item/Lexeme/Mediainfo to Print.pm
 OK [20231102] skim
+
+7. Preklady popisnych textu (cs, en)?
+OK [20240621] skim

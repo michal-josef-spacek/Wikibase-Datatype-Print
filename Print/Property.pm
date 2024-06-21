@@ -25,7 +25,7 @@ sub print {
 	}
 
 	my @ret = (
-		'Data type: '.$obj->datatype,
+		$opts_hr->{'texts'}->{'data_type'}.': '.$obj->datatype,
 	);
 
 	# Label.

@@ -7,6 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use Readonly;
 use Wikibase::Datatype::Print::Snak;
+use Wikibase::Datatype::Print::Utils qw(defaults);
 
 Readonly::Array our @EXPORT_OK => qw(print);
 
@@ -14,6 +15,8 @@ our $VERSION = 0.17;
 
 sub print {
 	my ($obj, $opts_hr) = @_;
+
+	$opts_hr = defaults($obj, $opts_hr);
 
 	if (! $obj->isa('Wikibase::Datatype::Reference')) {
 		err "Object isn't 'Wikibase::Datatype::Reference'.";
@@ -63,6 +66,8 @@ Returns list of lines in array context.
 =head1 ERRORS
 
  print():
+         From Wikibase::Datatype::Print::Utils::defaults():
+                 Defined text keys are bad.
          Object isn't 'Wikibase::Datatype::Reference'.
 
 =head1 EXAMPLE1

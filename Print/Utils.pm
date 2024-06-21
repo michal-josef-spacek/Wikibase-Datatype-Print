@@ -7,6 +7,7 @@ use warnings;
 use Error::Pure qw(err);
 use List::Util 1.33 qw(all);
 use Readonly;
+use Wikibase::Datatype::Print::Texts qw(text_keys texts);
 
 Readonly::Array our @EXPORT_OK => qw(defaults print_aliases print_common print_descriptions
 	print_forms print_glosses print_labels print_references print_senses
@@ -25,6 +26,16 @@ sub defaults {
 		$opts_hr->{'lang'} = 'en';
 	}
 
+	if (! exists $opts_hr->{'texts'}) {
+		$opts_hr->{'texts'} = texts($opts_hr->{'lang'});
+
+	# Check 'texts' keys if are right.
+	} else {
+		if (! all { exists $opts_hr->{'texts'}->{$_} } text_keys()) {
+			err 'Defined text keys are bad.';
+		}
+	}
+
 	return $opts_hr;
 }
 
@@ -32,7 +43,7 @@ sub print_aliases {
 	my ($obj, $opts_hr, $alias_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'aliases', $alias_cb,
-		'Aliases', sub {
+		$opts_hr->{'texts'}->{'aliases'}, sub {
 			grep { $_->language eq $opts_hr->{'lang'} } @_
 		},
 	);
@@ -79,7 +90,7 @@ sub print_descriptions {
 	my ($obj, $opts_hr, $desc_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'descriptions', $desc_cb,
-		'Description', sub {
+		$opts_hr->{'texts'}->{'description'}, sub {
 			grep { $_->language eq $opts_hr->{'lang'} } @_
 		}, 1,
 	);
@@ -89,21 +100,21 @@ sub print_forms {
 	my ($obj, $opts_hr, $form_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'forms', $form_cb,
-		'Forms');
+		$opts_hr->{'texts'}->{'forms'});
 }
 
 sub print_glosses {
 	my ($obj, $opts_hr, $glosse_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'glosses', $glosse_cb,
-		'Glosses');
+		$opts_hr->{'texts'}->{'glosses'});
 }
 
 sub print_labels {
 	my ($obj, $opts_hr, $label_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'labels', $label_cb,
-		'Label', sub {
+		$opts_hr->{'texts'}->{'label'}, sub {
 			grep { $_->language eq $opts_hr->{'lang'} } @_
 		}, 1,
 	);
@@ -113,28 +124,28 @@ sub print_references {
 	my ($obj, $opts_hr, $reference_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'references', $reference_cb,
-		'References');
+		$opts_hr->{'texts'}->{'references'});
 }
 
 sub print_senses {
 	my ($obj, $opts_hr, $sense_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'senses', $sense_cb,
-		'Senses');
+		$opts_hr->{'texts'}->{'senses'});
 }
 
 sub print_sitelinks {
 	my ($obj, $opts_hr, $sitelink_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'sitelinks', $sitelink_cb,
-		'Sitelinks');
+		$opts_hr->{'texts'}->{'sitelinks'});
 }
 
 sub print_statements {
 	my ($obj, $opts_hr, $statement_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'statements', $statement_cb,
-		'Statements');
+		$opts_hr->{'texts'}->{'statements'});
 }
 
 1;
@@ -273,6 +284,9 @@ Get statement strings from data object.
 Returns array with pretty print strings.
 
 =head1 ERRORS
+
+ defaults():
+         Defined text keys are bad.
 
  print_common():
          Multiple values are printed to one line.

@@ -26,27 +26,27 @@ sub print {
 	}
 
 	my @ret = (
-		'Title: '.$obj->title,
+		$opts_hr->{'texts'}->{'title'}.': '.$obj->title,
 	);
 
 	# Lemmas.
 	my ($lemma) = @{$obj->lemmas};
 	if (defined $lemma) {
-		push @ret, 'Lemmas: '.
+		push @ret, $opts_hr->{'texts'}->{'lemmas'}.': '.
 			Wikibase::Datatype::Print::Value::Monolingual::print($lemma, $opts_hr);
 	}
 
 	# Language.
 	if ($obj->language) {
 		push @ret, (
-			'Language: '.$obj->language,
+			$opts_hr->{'texts'}->{'language'}.': '.$obj->language,
 		);
 	}
 
 	# Lexical category.
 	if ($obj->lexical_category) {
 		push @ret, (
-			'Lexical category: '.$obj->lexical_category,
+			$opts_hr->{'texts'}->{'lexical_category'}.': '.$obj->lexical_category
 		);
 	}
 

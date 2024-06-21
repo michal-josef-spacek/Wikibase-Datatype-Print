@@ -25,14 +25,14 @@ sub print {
 	}
 
 	my @ret = (
-		'Id: '.$obj->id,
+		$opts_hr->{'texts'}->{'id'}.': '.$obj->id,
 	);
 
 	# Representation.
 	# XXX In every time one?
 	my ($representation) = @{$obj->representations};
 	if (defined $representation) {
-		push @ret, 'Representation: '.
+		push @ret, $opts_hr->{'texts'}->{'representation'}.': '.
 			Wikibase::Datatype::Print::Value::Monolingual::print($representation, $opts_hr);
 	}
 
@@ -43,7 +43,7 @@ sub print {
 			Wikibase::Datatype::Print::Value::Item::print($gr_feature, $opts_hr);
 	}
 	if (@gr_features) {
-		push @ret, 'Grammatical features: '.(join ', ', @gr_features);
+		push @ret, $opts_hr->{'texts'}->{'grammatical_features'}.': '.(join ', ', @gr_features);
 	}
 
 	# Statements.
