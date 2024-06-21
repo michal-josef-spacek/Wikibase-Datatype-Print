@@ -37,7 +37,7 @@ is($ret, $right_ret, 'Get printed value (item).');
 
 # Test.
 $obj = Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun->new;
-$ret = Wikibase::Datatype::Print::Lexeme::print($obj);
+$ret = Wikibase::Datatype::Print::print($obj);
 $right_ret = decode_utf8(<<'END');
 Title: Lexeme:L469
 Lemmas: pes (cs)
@@ -71,7 +71,7 @@ is($ret, $right_ret, 'Get printed value (lexeme).');
 
 # Test.
 $obj = Test::Shared::Fixture::Wikibase::Datatype::Mediainfo::Commons::ImageOfHuman->new;
-$ret = Wikibase::Datatype::Print::Mediainfo::print($obj);
+$ret = Wikibase::Datatype::Print::print($obj);
 $right_ret = <<'END';
 Id: M10031710
 Title: File:Douglas adams portrait cropped.jpg
@@ -87,7 +87,7 @@ is($ret, $right_ret, 'Get printed value (mediainfo).');
 
 # Test.
 $obj = Test::Shared::Fixture::Wikibase::Datatype::Property::Wikidata::InstanceOf->new;
-$ret = Wikibase::Datatype::Print::Property::print($obj);
+$ret = Wikibase::Datatype::Print::print($obj);
 $right_ret = decode_utf8(<<'END');
 Data type: wikibase-item
 Label: instance of (en)

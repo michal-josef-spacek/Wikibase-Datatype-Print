@@ -1,4 +1,5 @@
 0.17
+ - Fix tests for Wikibase::Datatype::Print.
  - Update copyright years.
 
 0.16 2023-11-02T19:59:25+01:00
