@@ -13,7 +13,7 @@ Readonly::Array our @EXPORT_OK => qw(defaults print_aliases print_common print_d
 	print_forms print_glosses print_labels print_references print_senses
 	print_sitelinks print_statements);
 
-our $VERSION = 0.17;
+our $VERSION = 0.18;
 
 sub defaults {
 	my ($obj, $opts_hr) = @_;
@@ -398,6 +398,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.17
+0.18
 
 =cut
