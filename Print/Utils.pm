@@ -138,7 +138,15 @@ sub print_sitelinks {
 	my ($obj, $opts_hr, $sitelink_cb) = @_;
 
 	return print_common($obj, $opts_hr, 'sitelinks', $sitelink_cb,
-		$opts_hr->{'texts'}->{'sitelinks'});
+		$opts_hr->{'texts'}->{'sitelinks'}, sub {
+			my @sitelinks = @_;
+			my $l = $opts_hr->{'lang'};
+			if (defined $l) {
+				return grep { $_->site =~ m/${l}wiki/ms } @sitelinks;
+			} else {
+				return @sitelinks;
+			}
+		});
 }
 
 sub print_statements {
