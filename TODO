@@ -22,7 +22,8 @@ Done for year
 39. Add options to doc.
 40. Tests for Text::defaults().
 41. Doc for Texts.
-42.
+42. Tests wd-print -l '' to print all languages.
+43.
 
 Applied
 =======
