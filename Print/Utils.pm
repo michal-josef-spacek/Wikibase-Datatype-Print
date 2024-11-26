@@ -42,11 +42,16 @@ sub defaults {
 sub print_aliases {
 	my ($obj, $opts_hr, $alias_cb) = @_;
 
-	return print_common($obj, $opts_hr, 'aliases', $alias_cb,
-		$opts_hr->{'texts'}->{'aliases'}, sub {
-			grep { $_->language eq $opts_hr->{'lang'} } @_
-		},
-	);
+	if ($opts_hr->{'lang'}) {
+		return print_common($obj, $opts_hr, 'aliases', $alias_cb,
+			$opts_hr->{'texts'}->{'aliases'}, sub {
+				grep { $_->language eq $opts_hr->{'lang'} } @_
+			},
+		);
+	} else {
+		return print_common($obj, $opts_hr, 'aliases', $alias_cb,
+			$opts_hr->{'texts'}->{'aliases'});
+	}
 }
 
 sub print_common {
