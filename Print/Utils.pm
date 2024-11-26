@@ -89,11 +89,16 @@ sub print_common {
 sub print_descriptions {
 	my ($obj, $opts_hr, $desc_cb) = @_;
 
-	return print_common($obj, $opts_hr, 'descriptions', $desc_cb,
-		$opts_hr->{'texts'}->{'description'}, sub {
-			grep { $_->language eq $opts_hr->{'lang'} } @_
-		}, 1,
-	);
+	if ($opts_hr->{'lang'}) {
+		return print_common($obj, $opts_hr, 'descriptions', $desc_cb,
+			$opts_hr->{'texts'}->{'description'}, sub {
+				grep { $_->language eq $opts_hr->{'lang'} } @_
+			}, 1,
+		);
+	} else {
+		return print_common($obj, $opts_hr, 'descriptions', $desc_cb,
+			$opts_hr->{'texts'}->{'description'});
+	}
 }
 
 sub print_forms {
