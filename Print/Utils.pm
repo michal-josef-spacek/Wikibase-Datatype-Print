@@ -123,11 +123,16 @@ sub print_glosses {
 sub print_labels {
 	my ($obj, $opts_hr, $label_cb) = @_;
 
-	return print_common($obj, $opts_hr, 'labels', $label_cb,
-		$opts_hr->{'texts'}->{'label'}, sub {
-			grep { $_->language eq $opts_hr->{'lang'} } @_
-		}, 1,
-	);
+	if ($opts_hr->{'lang'}) {
+		return print_common($obj, $opts_hr, 'labels', $label_cb,
+			$opts_hr->{'texts'}->{'label'}, sub {
+				grep { $_->language eq $opts_hr->{'lang'} } @_
+			}, 1,
+		);
+	} else {
+		return print_common($obj, $opts_hr, 'labels', $label_cb,
+			$opts_hr->{'texts'}->{'label'});
+	}
 }
 
 sub print_references {
