@@ -335,7 +335,7 @@ Returns array with pretty print strings.
  use Wikibase::Datatype::Print::Value::Monolingual;
 
  my $obj = Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog->new;
- my @ret = print_aliases($obj, {'lang' => 'cs'},
+ my @ret = print_aliases($obj, {'lang' => 'cs', 'texts' => {'aliases' => 'Aliases'}},
          \&Wikibase::Datatype::Print::Value::Monolingual::print);
 
  # Print.
@@ -359,7 +359,7 @@ Returns array with pretty print strings.
  use Wikibase::Datatype::Print::Value::Monolingual;
 
  my $obj = Test::Shared::Fixture::Wikibase::Datatype::Item::Wikidata::Dog->new;
- my @ret = print_descriptions($obj, {'lang' => 'cs'},
+ my @ret = print_descriptions($obj, {'lang' => 'cs', 'texts' => {'description' => 'Description'}},
          \&Wikibase::Datatype::Print::Value::Monolingual::print);
 
  # Print.
@@ -379,10 +379,11 @@ Returns array with pretty print strings.
  use Unicode::UTF8 qw(encode_utf8);
  use Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun;
  use Wikibase::Datatype::Print::Form;
- use Wikibase::Datatype::Print::Utils qw(print_forms);
+ use Wikibase::Datatype::Print::Utils qw(defaults print_forms);
 
  my $obj = Test::Shared::Fixture::Wikibase::Datatype::Lexeme::Wikidata::DogCzechNoun->new;
- my @ret = print_forms($obj, {'lang' => 'cs'},
+ my $opts_hr = defaults({'lang' => 'cs'});
+ my @ret = print_forms($obj, $opts_hr,
          \&Wikibase::Datatype::Print::Form::print);
 
  # Print.
