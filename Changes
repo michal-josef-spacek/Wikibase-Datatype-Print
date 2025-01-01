@@ -3,6 +3,7 @@
  - Add support for print of all descriptions.
  - Add support for print of all labels.
  - Filter sitelinks via language.
+ - Update copyright years.
  - Update fixtures to Wikibase::Datatype@0.36.
 
 0.17 2024-06-21T14:06:58+02:00
