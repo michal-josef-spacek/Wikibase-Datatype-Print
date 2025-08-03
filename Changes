@@ -1,4 +1,5 @@
 0.19
+ - Add Term module.
 
 0.18 2025-01-01T22:38:51+01:00
  - Add support for print of all aliases.
