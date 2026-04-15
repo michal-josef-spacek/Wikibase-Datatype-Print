@@ -1,4 +1,5 @@
 0.21
+ - Add support for tolerance with upper bound only (used in Q9543).
  - Add test for snak with quantity.
  - Regen example.
 

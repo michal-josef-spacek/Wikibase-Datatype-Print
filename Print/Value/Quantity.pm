@@ -46,8 +46,10 @@ sub print {
 	my $ret = $obj->value;
 	if ($obj->lower_bound) {
 		if ($obj->upper_bound) {
-			my $tolerance = $obj->value - $obj->lower_bound;
-			if ($tolerance != $obj->upper_bound - $obj->value) {
+			my $tolerance = $obj->upper_bound - $obj->value;
+			if ($obj->value != $obj->lower_bound
+				&& $tolerance != $obj->value - $obj->lower_bound) {
+
 				err 'Unsupported asymetric tolerance.';
 			}
 			$ret .= decode_utf8('±').$tolerance;
